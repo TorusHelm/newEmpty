@@ -2,19 +2,19 @@ doctype html
 html
     head
 
-        block template-params
-
         block title
             title= 'Заголовок страницы'
             meta(name="description" content="Описание страницы")
         include head
+        block style
+            link(rel='stylesheet', href='css/all.css')
 
     body
-        include ../parts/mixin-svg-use
-
         .page-wrap
             block content
 
         script(src="js/jquery-3.3.1.min.js")
+
         block script
+
         script(src="js/main.js")

@@ -4,14 +4,15 @@
 
     &__lbl{
         color: $color-disabled;
-        padding-right: 6px;
+        padding: 5px 6px 0 0;
 
         @include respondTo(mobile){
-            padding-right: .75em;
+            padding: 0 .75em 0 0;
             position: relative;
             color: $color-txt;
             text-decoration: underline;
             margin-bottom: .5em;
+            cursor: pointer;
         }
     }
 
@@ -70,6 +71,10 @@
             }
         }
     }
+
+    & .gap-t{
+        margin-top: 12px;
+    }
 }
 
 .list-filter{
@@ -100,9 +105,10 @@
         border: 2px solid transparent;
         padding: .2em 1em;
         cursor: pointer;
-        margin: 0 2px;
+        margin: 4px 2px;
         background-color: transparent;
         transition: background-color ease .3s;
+        position: relative;
 
         @include respondTo(mobile){
             padding: .5em 1em;
@@ -112,6 +118,28 @@
             &:first-of-type{
                 margin-top: 0;
             }
+        }
+
+        &:hover{
+            background-color: $color-secondary;
+
+            & .list-filter__link{
+                text-decoration: none;
+            }
+        }
+
+        &_sub-menu{
+
+            &:hover{
+                background-color: transparent;
+
+                & .list-filter__sub-list{
+                    opacity: 1;
+                    visibility: visible;
+                    transform: translateY(0);
+                }
+            }
+
         }
 
         &_clear{
@@ -130,14 +158,6 @@
 
             &:hover{
                 background-color: transparent;
-            }
-        }
-
-        &:hover{
-            background-color: $color-secondary;
-
-            & .list-filter__link{
-                text-decoration: none;
             }
         }
     }
@@ -173,6 +193,37 @@
 
         @at-root .is-active &{
             display: block;
+        }
+    }
+
+    //выпадающий список
+    &__sub-list{
+        position: absolute;
+        background-color: $color-white;
+        padding: 1em 0;
+        top: 100%;
+        left: 0;
+        z-index: 100;
+        box-shadow: 0 4px 8px rgba(99,102,106,.2);
+        opacity: 0;
+        visibility: hidden;
+        transition: all ease .3s;
+        transform: translateY(10px);
+        min-width: 100%;
+
+        & li{
+            padding: .5em 1.2em;
+            color: $color-txt;
+            font-size: 14px;
+            margin: 0;
+            
+            &:hover .list-filter__link{
+                text-decoration: underline;
+            }
+
+            & .list-filter__close{
+                display: none;
+            }
         }
     }
 }

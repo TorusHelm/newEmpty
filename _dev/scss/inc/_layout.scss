@@ -43,18 +43,6 @@ input, button {
 
 .c-container{
     @extend %c-wrap;
-
-    //не нашел, где используется
-    //TODO: удалить, если не нужен
-    //&:after{
-    //    content: "";
-    //    display: table;
-    //    clear: both;
-    //}
-}
-
-.d-container {
-    @extend %d-wrap;
 }
 
 .page-wrap {
@@ -71,37 +59,7 @@ input, button {
     }
 }
 
-.gap{//TODO: не понятно gap от чего? Сверху, снизу, сбоку... переписать
-    margin-bottom: $col-sm;
-
-    @include respondTo(small){
-        margin-bottom: $col-sm / 2;
-    }
-
-    &_md{
-        margin-bottom: $col;
-    }
-
-    &_xl{
-        margin-bottom: $col-sm * 2;
-    }
-
-    &_sm{
-        margin-bottom: $col-sm / 2;
-    }
-
-    &_xs{
-        margin-bottom: $col-xs !important;
-    }
-
-    &_xxxs{
-        margin-bottom: $col-xs / 3;
-    }
-}
-
 .section{
-    //TODO: всего несколько страницы, а уже куча модификаторов,
-    // подумать, как можно сделать универсальнее
     padding: $col-md 0;
 
     @include respondTo(tablet){
@@ -112,56 +70,12 @@ input, button {
         padding: $col-md 0 70px;
     }
 
-    &_events{
-        padding: $col 0 $col * 2;
-
-        @include respondTo(tablet){
-            padding: 27px 0 48px;
-        }
-
-        @include respondTo(mobile){
-            padding: 27px 0 $col;
-        }
-    }
-
-    &_vebinar{
-        padding: $col 0 $col-xxl;
-
-        @include respondTo(tablet){
-            padding: $col-xs 0 $col-xs * 2;
-        }
-
-        @include respondTo(mobile){
-            padding: $col-xs 0 $col / 2;
-        }
-    }
-
-    &_news{
-        padding: $col-md 0 $col;
-    }
-
     &_gray{
         background-color: $bg-secondary;
     }
 
     &_white{
         background-color: $bg-white;
-    }
-
-    &_reg{
-        padding: $col-sm * 2;
-
-        @include respondTo(small) {
-            padding: $col-sm $col / 2;
-        }
-    }
-
-    &_crumbs{
-        padding: $col 0;
-
-        @include respondTo(small) {
-            padding: $col / 2 0;
-        }
     }
 
     //middle padding for section 40px
@@ -186,17 +100,17 @@ input, button {
 }
 
 //TODO: это надо убрать отсюда, не отпносится к layout
-.block-shadow{
-    margin: 15px 15px 0 0;
-    box-shadow: 15px -15px 0px 0px $bg-primary;
-
-    @include respondTo(tablet){
-        margin: 12px 12px 0 0;
-        box-shadow: 12px -12px 0px 0px $bg-primary;
-    }
-
-    @include respondTo(small){
-        margin: 8px 8px 0 0;
-        box-shadow: 8px -8px 0px 0px $bg-primary;
-    }
-}
+//.block-shadow{
+//    margin: 15px 15px 0 0;
+//    box-shadow: 15px -15px 0px 0px $bg-primary;
+//
+//    @include respondTo(tablet){
+//        margin: 12px 12px 0 0;
+//        box-shadow: 12px -12px 0px 0px $bg-primary;
+//    }
+//
+//    @include respondTo(small){
+//        margin: 8px 8px 0 0;
+//        box-shadow: 8px -8px 0px 0px $bg-primary;
+//    }
+//}

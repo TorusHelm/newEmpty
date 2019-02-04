@@ -3,6 +3,8 @@ extends inc/base
 block title
   title= 'Личный кабинет Поставщика | Список заявок'
   meta(name="description" content="Описание страницы")
+block style
+  link(rel='stylesheet', href='css/lk-provider.css')
 
 block content
   include parts/header
@@ -16,7 +18,7 @@ block content
             .filter__col
               span.filter__lbl.js-filter Город
                 span.filter__lbl-prefix :
-              ul.filter__list.list-filter
+              ul.filter__list.list-filter.js-list-filter
                 li.list-filter__item.js-filter-item(data-href="all")
                   span.list-filter__link Все
                   span.list-filter__count 18
@@ -32,12 +34,36 @@ block content
                   span.list-filter__link Владивосток
                   span.list-filter__count 1
                   span.list-filter__close
+                li.list-filter__item.list-filter__item_sub-menu.js-sub-list
+                  span.list-filter__link Другие города
+                  ul.list-filter__sub-list
+                    li.list-filter__item.js-filter-item(data-href="ekat")
+                      span.list-filter__link Екатеринбург
+                      span.list-filter__count 1
+                      span.list-filter__close
+                    li.list-filter__item.js-filter-item(data-href="perm")
+                      span.list-filter__link Пермь
+                      span.list-filter__count 1
+                      span.list-filter__close
+                    li.list-filter__item.js-filter-item(data-href="chelyabinsk")
+                      span.list-filter__link Челябинск
+                      span.list-filter__count 1
+                      span.list-filter__close
+                    li.list-filter__item.js-filter-item(data-href="samara")
+                      span.list-filter__link Самара
+                      span.list-filter__count 1
+                      span.list-filter__close
+                    li.list-filter__item.js-filter-item(data-href="kazan")
+                      span.list-filter__link Казань
+                      span.list-filter__count 1
+                      span.list-filter__close
+
 
           .filter.gap-t
             .filter__col
               span.filter__lbl.js-filter Статус
                 span.filter__lbl-prefix :
-              ul.filter__list.list-filter
+              ul.filter__list.list-filter.js-list-filter
                 li.list-filter__item.js-filter-item(data-href="all-status")
                   span.list-filter__link Все
                   span.list-filter__count 18
