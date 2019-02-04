@@ -1,0 +1,64 @@
+header.header
+    .c-container
+        .header__wrapper
+            .header__left
+                a.logo(href='/')
+                    img(src='../../img/logo.svg', title='Честный ЗНАК', alt='Честный ЗНАК')
+            .header__center
+                ul.menu.target(data-target="menu")
+                    li.menu__item.menu__item_dd
+                        a.menu__link.menu__link_selected(href='/business/') Бизнесу
+                        ul.menu__sub.menu-sub.target(data-target="submenu1")
+                            li.menu-sub__item
+                                a.menu-sub__link(href='/business/#footer-link-two') Внедрение маркировки
+                            li.menu-sub__item
+                                a.menu-sub__link(onclick='scrollToHowEx();', href='/business/#tab-1') Как стать участником
+                            li.menu-sub__item
+                                a.menu-sub__link(onclick='scrollToHowEx();', href='/business/#tab-2') Как стать партнёром
+                            li.menu-sub__item
+                                a.menu-sub__link(href='/expertopinions/') Мнение экспертов
+                            li.menu-sub__item
+                                a.menu-sub__link(href='/business/#pilot-project') Пилотные проекты
+                            li.menu-sub__item
+                                a.menu-sub__link(href='/kontakty/') Контакты
+                    li.menu__item
+                        a.menu__link(href='https://честный2019.рф/') Потребителям
+                    li.menu__item.menu__item_dd
+                        a.menu__link(href='/o-chestnom-znake/') О честном знаке
+                        ul.menu__sub.menu-sub
+                            li.menu-sub__item
+                                a.menu-sub__link(href='/o-chestnom-znake/') О проекте
+                            li.menu-sub__item.item-selected
+                                a.menu-sub__link(href='/') Система маркировки
+                            li.menu-sub__item
+                                a.menu-sub__link(href='/#garant') Гарантия подлинности товара
+                            li.menu-sub__item
+                                a.menu-sub__link(href='/#vigodi_ot_vnedrenia') Выгоды от внедрения
+                            li.menu-sub__item
+                                a.menu-sub__link(href='/kontakty/') Контакты
+                    li.menu__item
+                        a.menu__link(href='/info/') Новости
+                    li.menu__item.menu__item_dd
+                        a.menu__link(href='https://xn--e1agagd2e.xn--80ajghhoc2aj1c8b.xn--p1ai/') Вебинары
+                        ul.menu__sub.menu-sub
+                            li.menu-sub__item
+                                a.menu-sub__link(href='/business/#footer-link-two') Расписание вебинаров
+                            li.menu-sub__item
+                                a.menu-sub__link(onclick='scrollToHowEx();', href='/business/#tab-1') Видеоархив
+                            li.menu-sub__item
+                                a.menu-sub__link(onclick='javascript: void(0);', href='/business/#tab-1') Петренко Петр Петрович
+                            li.menu-sub__item
+                                a.menu-sub__link(onclick='scrollToHowEx();', href='/business/#tab-2') Выйти
+                            li.menu-sub__item.d-none
+                                a.menu-sub__link(onclick='scrollToHowEx();', href='/business/#tab-2') Войти
+                    li.menu__item
+                        a.menu__link(href='/vopros-otvet/') Вопрос ответ
+                    li.menu__item
+                        a.menu__link(href='https://xn--e1agagd2e.xn--80ajghhoc2aj1c8b.xn--p1ai/') Контакты
+            .header__right
+                .search.target(data-target="search")
+                    .search__current.init(data-target="search")
+                    form.search__form(action='/search/')
+                        input.search__input(type='text', placeholder='', name='q')
+                        input.search__submit(type='submit', value=' ')
+            .menu__toggler.init.target(data-target="menu")

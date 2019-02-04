@@ -1,0 +1,45 @@
+.btn{
+    padding: 14px 24px 15px;
+    border: none;
+    cursor: pointer;
+
+    &_img{
+        padding: 16px;
+    }
+
+    &_primary{
+        background-color: $bg-primary;
+
+        &:hover{
+            background-color: darken($bg-primary, 5%);
+        }
+
+        &:active{
+            background-color: darken($bg-primary, 10%);
+        }
+    }
+
+    &_dark{
+        background-color: $bg-dark;
+
+        &:hover{
+            background-color: darken($bg-dark, 5%);
+        }
+
+        &:active{
+            background-color: darken($bg-dark, 10%);
+        }
+    }
+
+    &_secondary{
+        background-color: $bg-secondary;
+
+        &:hover{
+            background-color: darken($bg-secondary, 5%);
+        }
+
+        &:active{
+            background-color: darken($bg-secondary, 10%);
+        }
+    }
+}

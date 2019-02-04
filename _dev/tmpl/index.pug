@@ -1,0 +1,26 @@
+extends inc/base
+
+block title
+    title= ''
+    meta(name="description" content="Описание страницы")
+
+block content
+    include parts/header
+    main
+        section.section_events.section_gray
+            .c-container
+                include parts/breadcrumbs
+                .title_main.gap_xxxs Мероприятия
+                include parts/tabs
+                include parts/goodsSorting
+                .row.d-none.d-lg-flex
+                    - for (var x = 0; x < 9; x++)
+                        include parts/card
+                .row.d-none.d-md-flex.d-lg-none
+                    - for (var x = 0; x < 6; x++)
+                        include parts/card
+                .row.d-md-none
+                    - for (var x = 0; x < 3; x++)
+                        include parts/card
+                include parts/paginator
+    include inc/footer

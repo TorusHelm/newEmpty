@@ -1,0 +1,61 @@
+header.header
+    .top-background1
+        .page-line
+            .header
+                .header__left
+                    a.logo(href='/')
+                        img(src='../../img/logo.svg', title='Честный ЗНАК', alt='Честный ЗНАК')
+                .header__center
+                    ul.menu1.target(data-target="menuMobile")
+                        li.menu1__item
+                            a.root-item-selected(href='/business/') Бизнесу
+                            ul.menu1__sub
+                                li.menu1__sub-item
+                                    a(href='/business/#footer-link-two') Внедрение маркировки
+                                li.menu1__sub-item
+                                    a(onclick='scrollToHowEx();', href='/business/#tab-1') Как стать участником
+                                li.menu1__sub-item
+                                    a(onclick='scrollToHowEx();', href='/business/#tab-2') Как стать партнёром
+                                li.menu1__sub-item
+                                    a(href='/expertopinions/') Мнение экспертов
+                                li.menu1__sub-item
+                                    a(href='/business/#pilot-project') Пилотные проекты
+                                li.menu1__sub-item
+                                    a(href='/kontakty/') Контакты
+                        li.menu1__item
+                            a.root-item(href='https://честный2019.рф/') Потребителям
+                        li.menu1__item
+                            a.root-item(href='/o-chestnom-znake/') О честном знаке
+                            ul.menu1__sub
+                                li.menu1__sub-item
+                                    a(href='/o-chestnom-znake/') О проекте
+                                li.menu1__sub-item.item-selected
+                                    a(href='/') Система маркировки
+                                li.menu1__sub-item
+                                    a(href='/#garant') Гарантия подлинности товара
+                                li.menu1__sub-item
+                                    a(href='/#vigodi_ot_vnedrenia') Выгоды от внедрения
+                                li.menu1__sub-item
+                                    a(href='/kontakty/') Контакты
+                        li.menu1__item
+                            a.root-item(href='/info/') Новости
+                        li.menu1__item
+                            a.root-item(href='/vebinar.html') Вебинары
+                            ul.menu1__sub
+                                li.menu1__sub-item
+                                    a(href='/o-chestnom-znake/') Расписание вебинаров
+                                li.menu1__sub-item.item-selected
+                                    a(href='/') Видеоархив 
+                                li.menu1__sub-item
+                                    a(href='/#garant') Непридумал Непридум Непридумович
+                                li.menu1__sub-item
+                                    a(href='/#vigodi_ot_vnedrenia') Выйти 
+                        li.menu1__item
+                            a.root-item(href='/elements.html') Вопрос ответ
+                .header__right
+                    .search1.js_outClick
+                        .search1__current
+                        form.search1__form(action='/search/')
+                            input.search1__input(type='text', placeholder='', name='q')
+                            input.search1__submit(type='submit', value=' ')
+                .menu-button1.init.target(data-target="menuMobile")

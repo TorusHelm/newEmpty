@@ -1,0 +1,19 @@
+.hash{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 48px;
+    &__item{
+        color: $color-disabled;
+        font-weight: bold;
+        font-size: $fz-xs;
+        line-height: 16px;
+        text-transform: uppercase;
+        margin-right: 24px;
+        letter-spacing: 0.8px;
+        &:last-of-type{
+            margin-right: 0;
+        }
+    }
+}

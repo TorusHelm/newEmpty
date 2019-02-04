@@ -1,0 +1,79 @@
+extends inc/base
+
+block title
+  title= 'Тест на готовность магазина к маркировке'
+  meta(name="description" content="Описание страницы")
+
+block content
+  include parts/header
+
+  section.section.section_m-pad.after-fixed-nav
+    .c-container
+      .row
+        .col
+          ul.breadcrumbs
+            li.breadcrumbs__item
+              a.breadcrumbs__link(href='/') Главная
+            li.breadcrumbs__item
+              a.breadcrumbs__link(href='/business/') Бизнесу
+            li.breadcrumbs__item
+              span тест на&nbsp;готовность магазина
+      .row
+        .col
+          h1.title Тест на&nbsp;готовность магазина к&nbsp;маркировке
+      .row
+        .col
+          .nav-tab.js_outClick.js_tabsOption
+            .nav-tab__wrapper
+              .nav-tab__item Маркировка табака с 1 марта 2019 года
+              .nav-tab__item.active Новые правила продажи табака
+              .nav-tab__item Что нужно для продажи по новым правилам
+              .nav-tab__item Тест на готовность магазина к маркировке
+
+  section.section.section_no-pad-top
+    .c-container
+      .row
+        .col-12.col-lg-6
+          img(src="img/img-provider-new-rule.png" alt="")
+        .col-12.col-lg-6
+          .c-block
+            h2.content-title.content-title_mid Что измениться для розницы?
+            ul.list.list_def.square.c-block__list
+              li Производитель будет маркировать каждую пачку уникальным DataMatrix кодом.
+              li Поставка маркированных сигарет в&nbsp;розничную точку будет сопровождаться электронными универсальными передаточными документами (УПД) с&nbsp;указанием кодов продукции.
+              li При продаже сигарет на&nbsp;кассе нужно просканировать DataMatrix код с&nbsp;каждой пачки или блока.
+              li При продаже товара касса должна передать в&nbsp;ОФД информацию о&nbsp;том, что в&nbsp;чеке содержится маркируемая продукция.
+            a.btn.btn_primary.btn_reset-sm(href="#") Пройти тест <span class="d-none d-sm-block">на&nbsp;готовность магазина к&nbsp;маркировке</span>
+
+  section.section.section_gray
+    .c-container
+      h2.content-title.content-title_no-mrg Что нужно знать о&nbsp;маркировке?
+      .row
+        .col-lg-4
+          figure.iconbox.iconbox_horizontal
+            img.iconbox__img(src="img/img-cash-box.svg" alt="")
+            figcapture.iconbox__body
+              p.iconbox__txt Согласно закону &#8470;&nbsp;54-ФЗ для торговли подакцизными товарами необходимо использовать онлайн-кассу с&nbsp;возможностью расшифровки номенклатуры
+        .col-lg-4
+          figure.iconbox.iconbox_horizontal
+            img.iconbox__img(src="img/img-scanner.svg" alt="")
+            figcapture.iconbox__body
+              p.iconbox__txt Если вы&nbsp;используете систему ЕГАИС, то&nbsp;ваш сканер штрих-кода подойдет для работы с&nbsp;маркировкой
+        .col-lg-4
+          figure.iconbox.iconbox_horizontal
+            img.iconbox__img(src="img/img-program.svg" alt="")
+            figcapture.iconbox__body
+              p.iconbox__txt ПО&nbsp;кассовой техники должно формировать и&nbsp;отправлять в&nbsp;ОФД электронный кассовый чек с&nbsp;указанием кода маркировки товара
+        .col-lg-4
+          figure.iconbox.iconbox_horizontal
+            img.iconbox__img(src="img/img-check.svg" alt="")
+            figcapture.iconbox__body
+              p.iconbox__txt ОФД передает электронный кассовый чек с&nbsp;указанием кода маркировки товара в&nbsp;систему Честный ЗНАК
+        .col-lg-4
+          figure.iconbox.iconbox_horizontal
+            img.iconbox__img(src="img/img-egais.svg" alt="")
+            figcapture.iconbox__body
+              p.iconbox__txt Если вы&nbsp;используете систему ЕГАИС, то&nbsp;ваш сканер штрих-кода подойдет для работы с&nbsp;маркировкой
+
+
+  include inc/footer

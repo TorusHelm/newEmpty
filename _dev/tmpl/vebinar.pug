@@ -1,0 +1,56 @@
+extends inc/base
+
+block title
+    title= ''
+    meta(name="description" content="Описание страницы")
+
+block content
+    include parts/header
+    main
+        section.section_vebinar
+            .c-container
+                include parts/breadcrumbs
+                .title_main.gap_xs Криптозащита кода. Как подготовиться медицинской организации и&nbsp;аптеке.
+                include parts/hash
+                .row.vebinar__row
+                    .vebinar__col-lg.d-flex.flex-column
+                        .vebinar__video
+                            .vebinar__play
+                                img(src="../../img/play.svg", alt="Play")
+                        .leader.leader_md
+                            .leader__logo 
+                                img(src="../../img/boris.jpg", alt="")
+                            .leader__name
+                                .leader__title Антон Харитонов
+                                .leader__subtitle Руководитель направления «Фарма» 
+                        .par_sm.gap_md Коллеги, приглашаем представителей розничной торговли и компаний-производителей, дистрибьюторов, дилеров табачной продукции принять участие в вебинаре 13.09.18 в 16.00.
+                            br 
+                            br 
+                            | Узнайте, как изменит российский рынок цифровая маркировка и почему контрафакт скоро уйдет с рынка.
+                        .title_md.gap_sm Темы вебинара
+                        .list.list_themes
+                            .list__item.list__item_square Что такое маркировка, и чем она послужит российской рознице.
+                            .list__item.list__item_square Продажа легализированной табачной продукции в розничных точках.
+                            .list__item.list__item_square Маркировка табака, преимущества для бизнеса.
+                            .list__item.list__item_square Как стать участником проекта.
+                    .vebinar__col-sm.d-flex.flex-column
+                        .alert.alert_bg-secondary
+                            .alert__title Расскажите друзьям
+                            .socials
+                                a(href="#").socials__icon.socials__face_fill
+                                a(href="#").socials__icon.socials__vk_fill
+                                a(href="#").socials__icon.socials__ok_fill
+                                a(href="#").socials__icon.socials__tw_fill
+                                a(href="#").socials__icon.socials__google_fill
+                        .alert.alert_bg-secondary
+                            .alert__title Подпишитесь на новости
+                            .alert__text Регулярно получайте новости о предстоящих мероприятиях и вебинарах от Честного ЗНАКа на свою электронную почту.
+                            button.btn Подписаться на новости
+                        .alert.alert_bg-secondary
+                            .alert__title Остались вопросы?
+                            .alert__text Техническая поддержка
+                                .alert__accent lecture@crpt.ru
+                            .alert__text Информация по мероприятиям
+                                .alert__accent +7 800 707-23-36
+                            button.btn Задать вопрос
+    include inc/footer

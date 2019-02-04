@@ -1,0 +1,68 @@
+//.clearfix {
+//    &:after {
+//        display: block;
+//        clear: both;
+//        content: "";
+//    }
+//}
+
+//TODO: wtf, realy???
+.p{
+    &-mw{
+        &-md{
+            @include respondTo(mobile){
+                &-0{
+                    padding: 0 !important;
+                }
+            }
+        }
+    }
+}
+
+//отступы
+//отступ сверху по умолчанию 20px
+.gap-t{
+    margin-top: 20px;
+
+    @include respondTo(mobile){
+        margin-top: 16px;
+    }
+
+    //средний отступ
+    &_m{
+        margin-top: 32px;
+
+        @include respondTo(mobile){
+            margin-top: 6px;
+        }
+    }
+
+    //большой отступ
+    &_lg{
+        margin-top: 40px;
+
+        @include respondTo(mobile){
+            margin-top: 20px;
+        }
+    }
+}
+
+//fix mbl menu-btn
+.menu-button1{
+    height: 18px;
+}
+
+.nowrap{
+    white-space: nowrap;
+}
+
+//TODO: временное решение, надо быстро сделать
+.bg-fixed{
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(#63666A, .7);
+}

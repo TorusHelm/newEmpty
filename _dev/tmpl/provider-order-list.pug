@@ -1,0 +1,95 @@
+extends inc/base
+
+block title
+  title= 'Личный кабинет Поставщика | Список заявок'
+  meta(name="description" content="Описание страницы")
+
+block content
+  include parts/header
+
+  section.section.section_m-pad.section_mobile-sm.after-fixed-nav
+    .c-container
+      .row
+        .col
+          h1.title Список заявок
+          .filter.gap-t
+            .filter__col
+              span.filter__lbl.js-filter Город
+                span.filter__lbl-prefix :
+              ul.filter__list.list-filter
+                li.list-filter__item.js-filter-item(data-href="all")
+                  span.list-filter__link Все
+                  span.list-filter__count 18
+                li.list-filter__item.js-filter-item.is-active(data-href="moscow")
+                  span.list-filter__link Москва
+                  span.list-filter__count 9
+                  span.list-filter__close
+                li.list-filter__item.js-filter-item(data-href="piter")
+                  span.list-filter__link Санкт-Петербург
+                  span.list-filter__count 8
+                  span.list-filter__close
+                li.list-filter__item.js-filter-item(data-href="vladivostok")
+                  span.list-filter__link Владивосток
+                  span.list-filter__count 1
+                  span.list-filter__close
+
+          .filter.gap-t
+            .filter__col
+              span.filter__lbl.js-filter Статус
+                span.filter__lbl-prefix :
+              ul.filter__list.list-filter
+                li.list-filter__item.js-filter-item(data-href="all-status")
+                  span.list-filter__link Все
+                  span.list-filter__count 18
+                li.list-filter__item.js-filter-item(data-href="open")
+                  span.list-filter__link Открыта
+                  span.list-filter__count 4
+                  span.list-filter__close
+                li.list-filter__item.js-filter-item(data-href="in-job")
+                  span.list-filter__link В работе у меня
+                  span.list-filter__count 10
+                  span.list-filter__close
+
+            .filter__col.filter__col_right
+              p.filter__txt У вас в работе 10 заявок.&nbsp;
+                span.filter__txt_notes Доступно еще 5 заявок.
+
+
+
+
+  section.section.section_no-pad-top.section_m-pad
+    .c-container
+      .row
+        .col
+          .fake-tbl.gap-t_m
+            a(href="/provider-order-item.html").fake-tbl__row
+              span.fake-tbl__col.fake-tbl__col_date 21.01.2019 13:45
+              span.fake-tbl__col.fake-tbl__col_name ООО «Рога и копыта»
+              span.fake-tbl__col Москва
+              span.fake-tbl__col Открыта
+              span.fake-tbl__col.fake-tbl__col_link Перейти к заявке
+            a(href="/provider-order-item.html").fake-tbl__row
+              span.fake-tbl__col.fake-tbl__col_date 21.01.2019 13:45
+              span.fake-tbl__col.fake-tbl__col_name ООО «Рога и копыта»
+              span.fake-tbl__col Москва
+              span.fake-tbl__col Открыта
+              span.fake-tbl__col.fake-tbl__col_link Перейти к заявке
+            a(href="/provider-order-item.html").fake-tbl__row
+              span.fake-tbl__col.fake-tbl__col_date 21.01.2019 13:45
+              span.fake-tbl__col.fake-tbl__col_name ООО «Рога и копыта»
+              span.fake-tbl__col Москва
+              span.fake-tbl__col В работе у меня
+              span.fake-tbl__col.fake-tbl__col_link Перейти к заявке
+            a(href="/provider-order-item.html").fake-tbl__row
+              span.fake-tbl__col.fake-tbl__col_date 21.01.2019 13:45
+              span.fake-tbl__col.fake-tbl__col_name ООО «Рога и копыта»
+              span.fake-tbl__col Москва
+              span.fake-tbl__col Открыта
+              span.fake-tbl__col.fake-tbl__col_link Перейти к заявке
+            a(href="/provider-order-item.html").fake-tbl__row
+              span.fake-tbl__col.fake-tbl__col_date 21.01.2019 13:45
+              span.fake-tbl__col.fake-tbl__col_name ООО «Рога и копыта» ООО «Рога и копыта»ООО «Рога и копыта» ООО «Рога и копыта» ООО «Рога и копыта» ООО «Рога и копыта» ООО «Рога и копыта»
+              span.fake-tbl__col Москва
+              span.fake-tbl__col В работе у меня
+              span.fake-tbl__col.fake-tbl__col_link Перейти к заявке
+  include inc/footer

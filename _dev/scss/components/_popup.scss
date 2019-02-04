@@ -1,0 +1,67 @@
+.popup{
+    z-index: 1001;
+    max-width: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $color-white;
+    padding: 64px;
+    box-shadow: 16px -16px 0 0 $color-primary;
+    width: 100%;
+
+    @include respondTo(tablet){
+        padding: 40px;
+    }
+
+    @include respondTo(mobile){
+        padding: 20px;
+        max-width: 480px;
+    }
+
+    @include respondTo(small){
+        padding: 20px;
+        max-width: 280px;
+        box-shadow: 8px -8px 0 0 $color-primary;
+    }
+
+    &__close{
+        background: url('../img/ico-close-popup.svg') no-repeat;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        right: -64px;
+        top: -64px;
+        cursor: pointer;
+
+        @include respondTo(tablet){
+            right: -50px;
+            top: -50px;
+        }
+
+        @include respondTo(small){
+            right: -20px;
+            top: -40px;
+        }
+    }
+
+    &__title{
+        @extend %title;
+
+        font-size: 28px;
+        margin-bottom: .85em;
+
+        @include respondTo(mobile) {
+            font-size: 20px;
+            line-height: 26px;
+        }
+    }
+
+    &__txt{
+        font-weight: 700;
+
+        @include respondTo(mobile){
+            font-size: 16px;
+        }
+    }
+}

@@ -1,0 +1,28 @@
+%c-wrap{
+    max-width: 1260px;
+    margin: 0 auto;
+    width: 100%;
+
+    @include respondTo(containerFix){
+        padding: 0 15px;
+    }
+
+    @include respondTo(tablet){
+        padding: 0 32px;
+    }
+
+    @include respondTo(mobile){
+        padding: 0 20px;
+    }
+}
+
+%d-wrap{
+    max-width: 615px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 15px;
+
+    @include respondTo(small){
+        padding: 0 20px;
+    }
+}

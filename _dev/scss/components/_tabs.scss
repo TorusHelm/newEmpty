@@ -1,0 +1,121 @@
+.nav-tab{
+    border-bottom: 1px solid $color-border;
+
+    @include respondTo(mobile){
+        flex-direction: column;
+        overflow: hidden;
+        height: 48px;
+        position: relative;
+    }
+
+    &__wrapper{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        @at-root .nav-tab.active &{
+            background-color: $bg-white;
+            padding: 0 10px;
+            width: calc(100% + 20px);
+            margin-left: -10px;
+            box-shadow: 0 4px 8px 0 rgba(99, 102, 106, 0.2);
+        }
+
+        @include respondTo(mobile){
+            flex-direction: column;
+        }
+    }
+
+    &__item{
+        line-height: 1.5;
+        color: $color-txt;
+        position: relative;
+        cursor: pointer;
+        font-size: $fz-big / 2;
+        text-decoration: none;
+        padding: 1em;
+        font-weight: normal;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        white-space: nowrap;
+
+        @include respondTo(tablet){
+            padding: 14px 16px;
+            font-size: 15px;
+            line-height: 20px;
+        }
+
+        @include respondTo(mobile){
+            padding: 14px 0;
+            justify-content: left;
+            white-space: normal;
+        }
+
+        &:hover{
+            text-decoration: underline;
+        }
+
+        &:last-child{
+            margin-right: 0;
+        }
+
+        &_icon{
+            padding-left: 2.33em;
+            margin-right: 1em;
+        }
+
+        &.active{
+            font-weight: bold;
+            text-decoration: none;
+
+            @include respondTo(mobile){
+                display: flex;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                order: -1;
+            }
+
+            &:before{
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                display: block;
+                content: '';
+                border-bottom: 4px solid $color-primary;
+            }
+
+            & .nav-tab__count{
+                background-color: $color-primary;
+            }
+        }
+    }
+
+    &.active{
+        overflow: visible;
+
+        @include respondTo(mobile){
+            overflow: visible;
+            z-index: 99;
+        }
+    }
+
+    //номер таба в желтой иконке
+    &__count{
+        color: $color-txt;
+        border-radius: 50%;
+        width: 2em;
+        height: 2em;
+        font-size: $fz-xs;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $color-border;
+        flex-shrink: 0;
+        position: absolute;
+        left: 0;
+        top: calc(50% - 1em);
+    }
+}

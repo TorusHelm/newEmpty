@@ -1,0 +1,65 @@
+.title{
+
+    &_main{
+        color: $color-txt;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 1.1;
+
+        @include respondTo(tablet){
+            font-size: $fz-xxl / 2;
+            line-height: 1.14;
+        }
+
+        @include respondTo(mobile){
+            font-size: 24px;
+            line-height: 1.3;
+        }
+    }
+
+    &_md{
+        font-size: $fz-mid;
+        line-height: 28px;
+        font-weight: bold;
+
+        @include respondTo(mobile){
+            font-size: 20px;
+            line-height: 26px;
+        }
+    }
+}
+
+.content-title{
+    color: $color-txt;
+    font-size: $fz-big; //32px
+    font-weight: bold;
+    line-height: 1.125;
+    margin-bottom: 20px;
+
+    @include respondTo(desktop){
+        font-size: 28px;
+    }
+
+    @include respondTo(mobile){
+        font-size: 20px
+    }
+
+    &_mid{
+        font-size: $fz-mid; //24px
+        line-height: 1.33;
+
+        @include respondTo(tablet){
+            & br{
+                display: none;
+            }
+        }
+
+        @include respondTo(mobile){
+            font-size: 20px
+        }
+    }
+
+    &_no-mrg{
+        margin: 0;
+    }
+}

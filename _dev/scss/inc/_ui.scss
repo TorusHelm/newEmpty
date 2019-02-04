@@ -1,0 +1,207 @@
+$color-primary: #f2eb3b;
+$color-txt: #363634;
+$color-disabled: #898987;
+$color-border: #EAEAEA;
+$color-error: #A94442;
+
+/*------------- inputs -------------------- */
+.inp{
+    width: 100%;
+    font-size: 16px;
+    color: $color-txt;
+    background-color: transparent;
+    border-bottom: 2px solid $color-border;
+    height: 3em;
+    line-height: 3;
+
+    @at-root .is-error &{
+        border-bottom-color: $color-error;
+    }
+
+    &:focus,
+    &.is-focus{
+        border-bottom-color: $color-primary;
+    }
+
+    &:disabled,
+    &.is-disabled{
+        cursor: default;
+        color: $color-disabled;
+    }
+
+    &_icon{
+        padding-right: 1.5em;
+    }
+}
+
+.inp[type="password"] {
+    letter-spacing: 4px;
+
+    &::placeholder{
+        letter-spacing: normal;
+    }
+ }
+
+//убираю фон автозаполнения
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset !important;
+}
+
+//убираю крестик в IE
+input::-ms-clear {
+    display: none;
+}
+
+/*------------- checkbox and radio -------------------- */
+.checkbox,
+.radio{
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    margin: 10px 0 0 20px;
+}
+
+.checkbox + label,
+.radio + label {
+    position: relative;
+    padding: 4px 0 0 32px;
+    cursor: pointer;
+    display: inline-block;
+    color: $color-txt;
+    font-family: "Circe", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.3;
+}
+
+.checkbox + label:before,
+.radio + label:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 0;
+    box-sizing: border-box;
+    border: 2px solid $color-border;
+    background: transparent;
+}
+
+.radio + label:before{
+    border-radius: 50%;
+}
+
+.checkbox + label:after,
+.radio + label:after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 3px;
+    width: 18px;
+    height: 14px;
+    transition: .2s;
+    opacity: 0;
+    visibility: hidden;
+    background: url('../img/ico-check.svg') no-repeat 50% 50% / contain; //TODO: change img
+}
+
+.radio + label:after{
+    background: $color-primary;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    top: 6px;
+    left: 6px;
+}
+
+.checkbox:checked + label:after,
+.radio:checked + label:after {
+    opacity: 1;
+    visibility: visible;
+}
+
+//notes and message for input
+.inp-notes{
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    white-space: nowrap;
+    font-size: 12px;
+    color: #cccccc;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @at-root .is-error &{
+        color: $color-error;
+    }
+}
+
+//icons for input
+.inp-icon{
+    position: absolute;
+    right: 0;
+    top: 15px;
+    cursor: pointer;
+    z-index: 10;
+    display: inline-block;
+
+    &_pass{
+        width: 20px;
+        height: 18px;
+        background: url('../img/ico-show-pass.svg') no-repeat;
+    }
+}
+
+//TODO: надо доделать, сейчас некогда
+.inp-textarea{
+    @extend .inp;
+
+    font-family: $ff-base;
+    border: none;
+    resize: none;
+    border-bottom: 2px solid $color-border;
+    overflow: hidden;
+    line-height: 1.5;
+    transition: all ease .2s;
+    padding: .85em 0 0;
+
+    //&::placeholder{
+    //    line-height: 3em;
+    //}
+}
+
+//фейковое поле для рассыета высоты у textarea
+.inp-text-fake{
+    display: none;
+    position: absolute;
+    left: 0;
+    white-space: pre-wrap;
+    width: 100%;
+    font-size: 16px;
+    min-height: 3em;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    line-height: 1.5;
+    font-family: $ff-base;
+    padding: .85em 0 0;
+}
+
+
+/*------------- indicators -------------------- */
+.spinner{
+    width: 24px;
+    height: 24px;
+    background: url('../img/spinner.svg') no-repeat;
+    animation: spinner 1s linear infinite;
+    flex-shrink: 0;
+}
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,11 @@
+.par{
+    color: $color-txt;
+    &_sm{
+        font-size: $fz-big / 2;
+        line-height: 24px;
+        font-weight: normal;
+    }
+    @include respondTo(mobile){
+        line-height: 22px;
+    }
+}

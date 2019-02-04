@@ -1,0 +1,48 @@
+//fonts
+$ff-base: 'Circe';
+//colors
+
+$color-primary: #f2eb3b;
+$primary-hover: #E8E138;
+$color-secondary: #F7F7F7;
+$color-dark: #63666a;
+$color-darkest: #434345;
+$color-white: #ffffff;
+$color-black: #000000;
+$color-breadcrumbs: #828282;
+$dots-breadcrumbs: #cccccc;
+$color-border: #ebebeb;
+$color-txt: #363634;
+$color-disabled: #898987;
+$color-txt-disabled: #b6b6b6;
+$color-txt-sec: rgba($color-txt,.5);
+$color-hover: rgba($color-primary, 0.8);
+$color-active: $color-primary;
+$color-hr: #e5e6ea;
+$color-border: #EAEAEA;
+$color-error: #A94442;
+
+
+$bg-primary: $color-primary;
+$bg-secondary: $color-secondary;
+$bg-dark: $color-dark;
+$bg-darkest: $color-darkest;
+$bg-white: $color-white;
+$bg-black: $color-black;
+$bg-hr: $color-hr;
+
+//font-size
+$fz-xxl: 56px;
+$fz-big: 32px;
+$fz-mid: 24px;
+$fz-def: 18px;
+$fz-sm: 14px;
+$fz-xs: 12px;
+
+//grid
+$col: 40px;
+$col-xxl: 100px;
+$col-xl: $col *2;
+$col-md: 64px;
+$col-sm: 32px;
+$col-xs: 24px;

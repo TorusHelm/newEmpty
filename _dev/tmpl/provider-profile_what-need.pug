@@ -1,0 +1,125 @@
+extends inc/base
+
+block title
+  title= 'Тест на готовность магазина к маркировке'
+  meta(name="description" content="Описание страницы")
+
+block content
+  include parts/header
+
+  section.section.section_m-pad.after-fixed-nav
+    .c-container
+      .row
+        .col
+          ul.breadcrumbs
+            li.breadcrumbs__item
+              a.breadcrumbs__link(href='/') Главная
+            li.breadcrumbs__item
+              a.breadcrumbs__link(href='/business/') Бизнесу
+            li.breadcrumbs__item
+              span тест на&nbsp;готовность магазина
+      .row
+        .col
+          h1.title Тест на&nbsp;готовность магазина к&nbsp;маркировке
+      .row
+        .col
+          .nav-tab.js_outClick.js_tabsOption
+            .nav-tab__wrapper
+              .nav-tab__item Маркировка табака с 1 марта 2019 года
+              .nav-tab__item Новые правила продажи табака
+              .nav-tab__item.active Что нужно для продажи по новым правилам
+              .nav-tab__item Тест на готовность магазина к маркировке
+
+  section.section.section_gray
+    .c-container
+      .row
+        .col-sm-6.col-md-4.col-lg-2
+          .iconbox.iconbox_step
+            span.iconbox__step 1
+            .iconbox__img
+              img(src="img/ico-reg-site.svg" alt="")
+            .iconbox__body
+              p.iconbox__txt Зарегистрироваться на&nbsp;сайте
+              a.iconbox__link(href="https://xn--80ajghhoc2aj1c8b.xn--p1ai/") ЧестныйЗНАК.рф
+        .col-sm-6.col-md-4.col-lg-2
+          .iconbox.iconbox_step
+            span.iconbox__step 2
+            .iconbox__img
+              img(src="img/ico-enter-profile.svg" alt="")
+            .iconbox__body
+              p.iconbox__txt Заполнить данные в&nbsp;личном кабинете
+              p.iconbox__notes Необходима электронная подпись
+        .col-sm-6.col-md-4.col-lg-2
+          .iconbox.iconbox_step
+            span.iconbox__step 3
+            .iconbox__img
+              img(src="img/ico-upgrade-cashbox.svg" alt="")
+            .iconbox__body
+              p.iconbox__txt Обновить прошивку онлайн-кассы
+        .col-sm-6.col-md-4.col-lg-2
+          .iconbox.iconbox_step
+            span.iconbox__step 4
+            .iconbox__img
+              img(src="img/ico-upgrade-system.svg" alt="")
+            .iconbox__body
+              p.iconbox__txt Обновить систему товарного учёта
+        .col-sm-6.col-md-4.col-lg-2
+          .iconbox.iconbox_step
+            span.iconbox__step 5
+            .iconbox__img
+              img(src="img/ico-connect-scanner.svg" alt="")
+            .iconbox__body
+              p.iconbox__txt Подключить 2D&nbsp;сканер штрихкода, если ранее не&nbsp;использовался
+        .col-sm-6.col-md-4.col-lg-2
+          .iconbox.iconbox_step.iconbox_last
+            span.iconbox__step 6
+            .iconbox__img
+              img(src="img/ico-settings-system.svg" alt="")
+            .iconbox__body
+              p.iconbox__txt Настроить систему электронного документооборота, если ранее не&nbsp;использовалась
+      .row
+        .col
+          .d-flex.justify-content-center
+            a.btn.btn_primary.btn_reset-sm(href="#") Пройти тест <span class="d-none d-sm-block">на&nbsp;готовность магазина к&nbsp;маркировке</span>
+
+  section.section
+    .c-container
+      .row
+        .col-md-9
+          h3.content-title.content-title_mid Инструкция по&nbsp;обновлению онлайн-касс и&nbsp;программного обеспечения, а&nbsp;также подключения ЭДО вы&nbsp;можете получить у&nbsp;производителей соответствующих решений.
+      .partner-block
+        h4.partner-block__title Поставщики кассовых решений
+        .partner-block__row
+          img.partner-block__item(src="img/p-1.png" alt="")
+          img.partner-block__item(src="img/p-2.png" alt="")
+          img.partner-block__item(src="img/p-3.png" alt="")
+          img.partner-block__item(src="img/p-4.png" alt="")
+          img.partner-block__item(src="img/p-5.png" alt="")
+          img.partner-block__item(src="img/p-6.png" alt="")
+          img.partner-block__item(src="img/p-7.png" alt="")
+      .partner-block
+        h4.partner-block__title Операторы фискальных данных (ОФД)
+        .partner-block__row
+          img.partner-block__item(src="img/p-8.png" alt="")
+          img.partner-block__item(src="img/p-9.png" alt="")
+          img.partner-block__item(src="img/p-10.png" alt="")
+          img.partner-block__item(src="img/p-11.png" alt="")
+          img.partner-block__item(src="img/p-12.png" alt="")
+      .partner-block
+        h4.partner-block__title Разработчики учетных решений
+        .partner-block__row
+          img.partner-block__item(src="img/p-13.png" alt="")
+          img.partner-block__item(src="img/p-14.png" alt="")
+          img.partner-block__item(src="img/p-15.png" alt="")
+          img.partner-block__item(src="img/p-16.png" alt="")
+          img.partner-block__item(src="img/p-17.png" alt="")
+      .partner-block
+        h4.partner-block__title Операторы фискальных данных (ОФД)
+        .partner-block__row
+          img.partner-block__item(src="img/p-9.png" alt="")
+          img.partner-block__item(src="img/p-12.png" alt="")
+          img.partner-block__item(src="img/p-18.png" alt="")
+          img.partner-block__item(src="img/p-19.png" alt="")
+          img.partner-block__item(src="img/p-14.png" alt="")
+
+  include inc/footer

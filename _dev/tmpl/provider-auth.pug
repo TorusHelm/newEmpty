@@ -1,0 +1,49 @@
+extends inc/base
+
+block title
+  title= 'Личный кабинет Поставщика | Авторизация'
+  meta(name="description" content="Описание страницы")
+
+block content
+  include parts/header
+
+  section.section.section_gray.section_m-pad.section_mobile-sm.after-fixed-nav
+    .c-container
+      .row
+        .col
+          ul.breadcrumbs.breadcrumbs_centr
+            li.breadcrumbs__item
+              a.breadcrumbs__link(href='/') Главная
+            li.breadcrumbs__item
+              span авторизация
+  section.section.section_gray.section_no-pad-top
+    .c-container
+      .row.justify-content-lg-center
+        .col-lg-10
+          .lk-auth
+            .lk-auth__form
+              form.form
+                h1.form__title Авторизация
+                p.form__txt Введите ваш логин и&nbsp;пароль для входа<br> в&nbsp;Личный кабинет Поставщика
+                .form__row
+                  .form__col.is-error
+                    input.inp(placeholder="Ваш логин" type="text" value="kjfdkjsk" required)
+                    span.inp-notes Ошибка
+                .form__row
+                  .form__col
+                    input.inp.inp_icon(placeholder="Ваш пароль" type="password" required)
+                    span.inp-icon.inp-icon_pass
+                .form__row.form__row_reset-sm.form__row_last
+                  .form__col.form__col_sm
+                    button.btn.btn_primary.btn_reset-sm Войти
+                  .form__col.form__col_sm
+                    a(href="#").link.link_btn Забыли пароль?
+
+            .lk-auth__content
+              h2.lk-auth__title Личный кабинет Поставщика
+              p Описание что за&nbsp;личный кабинет, зачем нужен.
+              p Можно тезисно булитами описать возможности.
+
+
+
+  include inc/footer

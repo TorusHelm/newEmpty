@@ -1,0 +1,39 @@
+%btn-reset{
+    border: none;
+    display: inline-block;
+    cursor: pointer;
+    font-family: 'Circe', sans-serif;
+
+    &:focus{
+        outline: none;
+    }
+
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+%title{
+    font-weight: 700;
+    color: $color-txt;
+
+    @include respondTo(tablet){
+        & br{
+            display: none;
+        }
+    }
+}
+
+%link-def{
+    text-decoration: underline;
+    color: $color-txt;
+    display: inline-block;
+
+    &:hover{
+        text-decoration: none;
+    }
+}
+
+%box-shadow{
+    box-shadow: 0 4px 8px rgba(#63666A, .2);
+}

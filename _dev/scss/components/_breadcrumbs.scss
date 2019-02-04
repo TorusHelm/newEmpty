@@ -1,0 +1,53 @@
+//TODO: надо бы переделать, не нравится что отсуп снизу
+.breadcrumbs{
+    margin-bottom: 17px;
+    line-height: 12px;
+
+    @include respondTo(tablet){
+        margin-bottom: 33px;
+    }
+
+    &_centr{
+        text-align: center;
+        //не хочу делать отдельный модификатор,
+        //по идее, у всего блока убрать бы отступ снизу
+        margin-bottom: 0;
+    }
+
+    &__item{
+        display: inline;
+        font-size: 10px;
+        font-weight: bold;
+        line-height: 12px;
+        text-transform: uppercase;
+        letter-spacing: 1.4px;
+
+        &:after{
+            display: inline-block;
+            content: '';
+            width: 4px;
+            height: 4px;
+            background-color: $dots-breadcrumbs;
+            border-radius: 4px;
+            vertical-align: top;
+            margin: 0 16px;
+            position: relative;
+            top: 5px;
+
+            @include respondTo(mobile){
+                margin: 0 5px;
+            }
+        }
+
+        &:last-of-type{
+
+            &:after{
+                display: none;
+            }
+        }
+    }
+
+    &__link{
+        color: $color-breadcrumbs;
+    }
+}

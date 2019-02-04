@@ -1,0 +1,249 @@
+//блок с кнопкой заявки рядом с формой
+.b-aside{
+    background-color: $color-dark;
+    padding: 40px;
+
+    @include respondTo(tablet){
+        padding: 20px;
+    }
+
+    @include respondTo(mobile){
+        padding: 40px;
+    }
+
+    @include respondTo(small){
+        padding: 24px 20px;
+    }
+
+    &__title{
+        @extend %title;
+
+        color: $color-white;
+        font-size: 28px;
+        line-height: 1.15;
+        margin-bottom: .85em;
+
+        @include respondTo(tablet){
+            font-size: 20px;
+        }
+
+        @include respondTo(mobile){
+            font-size: 28px;
+        }
+
+        @include respondTo(small){
+            font-size: 20px;
+        }
+    }
+
+    &__btn{
+        width: 100%;
+    }
+}
+
+//блок с контентом, у которого на декстопу отступ слева 30px
+.c-block{
+    padding-left: 30px;
+
+    @include respondTo(desktop){
+        padding-left: 0;
+    }
+
+    @include respondTo(tablet){
+        padding-top: 20px;
+    }
+
+    &__txt{
+        font-weight: 400;
+        line-height: 1.33;
+        font-size: $fz-mid;
+        padding: 40px 40px 40px 0;
+
+        @include respondTo(desktop){
+            font-size: 22px;
+            padding: 30px 0;
+        }
+
+        @include respondTo(mobile){
+            padding: 20px 0;
+            font-size: 16px;
+        }
+    }
+
+    &__list{
+        padding: 24px 0;
+    }
+
+    & .content-title{
+        margin-bottom: 0;
+    }
+}
+
+//бельый блок с внутренними отсупами 40px
+.white-block{
+    background-color: $color-white;
+    padding: 40px;
+
+    @include respondTo(tablet){
+        padding: 20px 40px;
+    }
+
+    @include respondTo(mobile){
+        padding: 20px;
+    }
+
+    //кастомизация
+    & .content-title{
+        font-size: 28px;
+
+        @include respondTo(tablet){
+            font-size: 24px;
+        }
+
+        @include respondTo(mobile){
+            font-size: 20px;
+        }
+    }
+
+    & .content-title_mid{
+        font-size: 24px;
+    }
+
+    & .list_def li{
+        font-size: 14px;
+
+        & .link{
+            font-weight: 700;
+        }
+    }
+
+    & .nav-tab{
+        padding-left: 40px;
+        padding-right: 40px;
+        margin-left: -40px;
+        margin-right: -40px;
+        width: calc(100% + 80px);
+
+        @include respondTo(mobile){
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-left: -20px;
+            margin-right: -20px;
+            width: calc(100% + 40px);
+        }
+    }
+
+    //fix для выравнивания высоты
+    //пока некогда придумать, как сделать более универсально,
+    //поэтому костыль
+    &.mh{
+        min-height:433px;
+
+        @include respondTo(tablet){
+            min-height: auto;
+        }
+    }
+}
+
+//блок со статусом проверки
+//используется в формах, при проверке данных
+.b-status{
+    display: flex;
+    align-items: center;
+    min-height: 48px; //высота кнопки рядом
+
+    &__txt{
+        color: $color-disabled;
+        font-size: $fz-xs;
+
+        & .link{
+            color: inherit;
+        }
+
+        @at-root .is-error &{
+            color: $color-error;
+        }
+    }
+
+    & .spinner{
+        margin-right: 16px;
+    }
+}
+
+//блок для прикрелпения файла
+.b-attach{
+    min-height: 56px;
+    padding: 10px 20px;
+    background-color: rgba(#F2EB3B ,.1);
+    border: 2px dashed $color-primary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.is-error{
+        border-color: $color-error;
+        background-color: rgba($color-error, .1);
+    }
+
+    &__add{
+        position: relative;
+        padding-left: 20px;
+        font-size: 16px;
+        text-decoration: none;
+        cursor: pointer;
+
+        @at-root .is-error &{
+            font-size: $fz-xs;
+            color: $color-error;
+            text-decoration: underline;
+            padding-left: 0;
+            
+            &:hover{
+                text-decoration: none;
+            }
+
+            &:before{
+                display: none;
+            }
+        }
+
+        &:before{
+            content: '';
+            position: absolute;
+            left: 0;
+            top: calc(50% - 6px);
+            width: 12px;
+            height: 12px;
+            background: url('../img/ico-add-attach.svg') no-repeat;
+        }
+
+        &_other{
+            font-weight: 700;
+            font-size: $fz-xs;
+            padding-left: 0;
+            text-decoration: underline;
+            color: $color-txt;
+
+            &:before{
+                display: none;
+            }
+        }
+    }
+
+    &__txt{
+        font-size: $fz-xs;
+        color: $color-disabled;
+
+        & .link{
+            color: inherit;
+        }
+
+        @at-root .is-error &{
+            color: $color-error;
+        }
+    }
+
+    & .spinner{
+        margin-right: 16px;
+    }
+}

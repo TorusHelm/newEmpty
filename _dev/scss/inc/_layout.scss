@@ -1,0 +1,202 @@
+html,
+body {
+    height: 100%;
+    font-family: $ff-base;
+    font-size: $fz-def;
+
+    a{
+        text-decoration: none;
+    }
+}
+
+main{//TODO: переписать, нельзя так делать (привязка к тегу)
+    flex: 0 0 auto;
+    margin-top: 88px;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-weight: normal;
+}
+
+*, *:before, *:after{
+    box-sizing: border-box;
+}
+
+a, input, select, button{
+    outline: none;
+}
+
+img, video{
+    max-width: 100%;
+}
+
+input, textarea{
+    -webkit-appearance: none;
+    font-family: 'Circe', sans-serif;
+}
+
+input, button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.c-container{
+    @extend %c-wrap;
+
+    //не нашел, где используется
+    //TODO: удалить, если не нужен
+    //&:after{
+    //    content: "";
+    //    display: table;
+    //    clear: both;
+    //}
+}
+
+.d-container {
+    @extend %d-wrap;
+}
+
+.page-wrap {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    @supports (display:grid) {
+        display: grid;
+        grid-template-rows: 1fr auto;
+        -ms-grid-rows: 1fr auto;
+        grid-template-columns: 100%;
+        -ms-grid-columns: 100%;
+    }
+}
+
+.gap{//TODO: не понятно gap от чего? Сверху, снизу, сбоку... переписать
+    margin-bottom: $col-sm;
+
+    @include respondTo(small){
+        margin-bottom: $col-sm / 2;
+    }
+
+    &_md{
+        margin-bottom: $col;
+    }
+
+    &_xl{
+        margin-bottom: $col-sm * 2;
+    }
+
+    &_sm{
+        margin-bottom: $col-sm / 2;
+    }
+
+    &_xs{
+        margin-bottom: $col-xs !important;
+    }
+
+    &_xxxs{
+        margin-bottom: $col-xs / 3;
+    }
+}
+
+.section{
+    //TODO: всего несколько страницы, а уже куча модификаторов,
+    // подумать, как можно сделать универсальнее
+    padding: $col-md 0;
+
+    @include respondTo(tablet){
+        padding: $col 0;
+    }
+
+    &_last{
+        padding: $col-md 0 70px;
+    }
+
+    &_events{
+        padding: $col 0 $col * 2;
+
+        @include respondTo(tablet){
+            padding: 27px 0 48px;
+        }
+
+        @include respondTo(mobile){
+            padding: 27px 0 $col;
+        }
+    }
+
+    &_vebinar{
+        padding: $col 0 $col-xxl;
+
+        @include respondTo(tablet){
+            padding: $col-xs 0 $col-xs * 2;
+        }
+
+        @include respondTo(mobile){
+            padding: $col-xs 0 $col / 2;
+        }
+    }
+
+    &_news{
+        padding: $col-md 0 $col;
+    }
+
+    &_gray{
+        background-color: $bg-secondary;
+    }
+
+    &_white{
+        background-color: $bg-white;
+    }
+
+    &_reg{
+        padding: $col-sm * 2;
+
+        @include respondTo(small) {
+            padding: $col-sm $col / 2;
+        }
+    }
+
+    &_crumbs{
+        padding: $col 0;
+
+        @include respondTo(small) {
+            padding: $col / 2 0;
+        }
+    }
+
+    //middle padding for section 40px
+    &_m-pad{
+        padding: $col 0;
+    }
+
+    &_no-pad-top{
+        padding-top: 0;
+    }
+
+    &_brd-bot{
+        border-bottom: 1px solid $color-secondary;
+    }
+
+    &_mobile-sm{
+
+        @include respondTo(mobile){
+            padding: 24px 0;
+        }
+    }
+}
+
+//TODO: это надо убрать отсюда, не отпносится к layout
+.block-shadow{
+    margin: 15px 15px 0 0;
+    box-shadow: 15px -15px 0px 0px $bg-primary;
+
+    @include respondTo(tablet){
+        margin: 12px 12px 0 0;
+        box-shadow: 12px -12px 0px 0px $bg-primary;
+    }
+
+    @include respondTo(small){
+        margin: 8px 8px 0 0;
+        box-shadow: 8px -8px 0px 0px $bg-primary;
+    }
+}

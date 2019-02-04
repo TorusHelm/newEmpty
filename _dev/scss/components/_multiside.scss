@@ -1,0 +1,27 @@
+.multiside{
+    display: flex;
+    flex-direction: row;
+    @include respondTo(tablet){
+        flex-direction: column;
+    }
+    &__section{
+        flex: 0 0 67%;
+        max-width: 67%;
+        @include respondTo(tablet){
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+    &__aside{
+        flex: 0 1 33%;
+        max-width: 33%;
+        margin-left: 40px;
+        @include respondTo(tablet){
+            margin-left: 0px;
+            margin-bottom: $col-sm / 2;
+            flex: 0 0 100%;
+            max-width: 100%;
+            order: -1;
+        }
+    }
+}
