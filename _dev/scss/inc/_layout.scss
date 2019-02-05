@@ -61,6 +61,7 @@ input, button {
 
 .section{
     padding: $col-md 0;
+    flex-shrink: 0;//fuck IE
 
     @include respondTo(tablet){
         padding: $col 0;

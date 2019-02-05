@@ -64,7 +64,9 @@ $col-va-gap: 16px; //вертикальный отступ между колон
         }
 
         &_sm{
+            //width: 100%;//fuck IE
             flex-basis: auto;
+
         }
     }
 

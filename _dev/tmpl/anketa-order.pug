@@ -5,7 +5,7 @@ block title
   meta(name="description" content="Описание страницы")
 
 block style
-  link(rel='stylesheet', href='css/all.css')
+  link(rel='stylesheet', href='css/anketa.css')
 
 block content
   include parts/header
@@ -102,10 +102,9 @@ block content
               .form__row.form__row_last.form__row_reset-sm
                 .form__col.form__col_sm
                   button.btn.btn_primary.btn_reset-sm(disabled) Проверить ИНН
-                .form__col.form__col_sm
-                  .b-status
-                    .spinner
-                    p.b-status__txt Идет проверка ИНН...
+                .form__col.form__col_sm.b-status
+                  .spinner
+                  p.b-status__txt Идет проверка ИНН...
 
       .row.gap-t_m
         .col-lg-8
@@ -126,10 +125,9 @@ block content
               .form__row.form__row_last.form__row_reset-sm
                 .form__col.form__col_sm
                   button.btn.btn_primary.btn_reset-sm(disabled) Проверить ИНН
-                .form__col.form__col_sm
-                  .b-status.is-error
-                    p.b-status__txt Указанный ИНН не&nbsp;найден. Сообщить о&nbsp;проблеме в&nbsp;службу поддержки&nbsp;
-                      a(href="mailto:support@crpt.ru").link support@crpt.ru
+                .form__col.form__col_sm.b-status.is-error
+                  p.b-status__txt Указанный ИНН не&nbsp;найден. Сообщить о&nbsp;проблеме в&nbsp;службу поддержки&nbsp;
+                    a(href="mailto:support@crpt.ru").link support@crpt.ru
 
       .row.gap-t_m
         .col-lg-8
@@ -150,10 +148,9 @@ block content
               .form__row.form__row_last.form__row_reset-sm
                 .form__col.form__col_sm
                   button.btn.btn_primary.btn_reset-sm(disabled) Проверить ИНН
-                .form__col.form__col_sm
-                  .b-status.is-error
-                    p.b-status__txt По&nbsp;одному ИНН можно загрузить Анкету-Заявку только 1&nbsp;раз. От&nbsp;организации с&nbsp;указанным ИНН Анкета-Заявка уже получена. Сообщить о&nbsp;проблеме в&nbsp;службу поддержки
-                      a(href="mailto:support@crpt.ru").link support@crpt.ru
+                .form__col.form__col_sm.b-status.is-error
+                  p.b-status__txt По&nbsp;одному ИНН можно загрузить Анкету-Заявку только 1&nbsp;раз. От&nbsp;организации с&nbsp;указанным ИНН Анкета-Заявка уже получена. Сообщить о&nbsp;проблеме в&nbsp;службу поддержки&nbsp;
+                    a(href="mailto:support@crpt.ru").link support@crpt.ru
 
 
 

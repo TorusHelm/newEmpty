@@ -23,7 +23,6 @@ function changeHeightTextarea() {
   txt.after(hiddenDiv);
 
   txt.keyup(function () {
-    console.log('key');
 
     content = txt.val();
     content = content.replace(/\n/g, '<br>');
@@ -181,7 +180,6 @@ function openFilterMenu() {
       var hideFilter = linkList.find('.js-filter-item');
 
       for(var i = 0; i <= hideFilter.length; i++){
-        console.log(hideFilter[i]);
         $(hideFilter[i]).insertBefore(linkList);
       }
       linkList.remove();
