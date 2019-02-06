@@ -1,9 +1,10 @@
-// https://github.com/ponomarev-iv/start-template/blob/master/gulpfile.js
 'use strict';
 
 const gulp = require('gulp'),
       prefixer = require('gulp-autoprefixer'),
       uglify = require('gulp-uglify'),
+      rollup = require('gulp-better-rollup'),
+      babel = require('rollup-plugin-babel'),
       sass = require('gulp-sass'),
       csso = require('gulp-csso'),
       imagemin = require('gulp-imagemin'),
@@ -96,7 +97,10 @@ function images() {
 function js() {
   return gulp
     .src(path.src.js)
-    .pipe(uglify())
+    .pipe(sourcemaps.init())
+    .pipe(rollup({plugins: [babel()]}, 'umd'))
+    .pipe(sourcemaps.write('./maps'))
+    // .pipe(uglify())
     .pipe(gulp.dest(path.build.js))
     .pipe(browsersync.stream());
 }

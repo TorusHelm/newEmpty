@@ -41,6 +41,9 @@ block content
               .form__col
                 input.checkbox(type="checkbox" name="agree" id="agree" checked)
                 label.lbl(for="agree") Условия прочитал
+            .form__row
+              .form__col
+                textarea.inp-textarea.js-text-area(placeholder="Сообщение" rows="1" id="message")
 
   section.section
     .c-container
@@ -98,3 +101,5 @@ block content
 
 block script
   script(src="js/selectric.min.js")
+  script(src="js/forms.js")
+  //script(src="js/main.js")

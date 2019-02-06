@@ -3,6 +3,7 @@ function toggleTabs() {
   var tab = $('.js-tab');
 
   tab.on('click', function(){
+
     if(!$(this).hasClass('active')){
       var tabId = $(this).attr('data-href');
       tab.removeClass('active');
@@ -12,3 +13,5 @@ function toggleTabs() {
     }
   })
 }
+
+export { toggleTabs }
