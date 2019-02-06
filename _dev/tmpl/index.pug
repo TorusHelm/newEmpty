@@ -1,26 +1,38 @@
 extends inc/base
 
 block title
-    title= ''
-    meta(name="description" content="Описание страницы")
+  title= 'Главная страница'
+  meta(name="description" content="Описание страницы")
 
 block content
-    include parts/header
-    main
-        section.section_events.section_gray
-            .c-container
-                include parts/breadcrumbs
-                .title_main.gap_xxxs Мероприятия
-                include parts/tabs
-                include parts/goodsSorting
-                .row.d-none.d-lg-flex
-                    - for (var x = 0; x < 9; x++)
-                        include parts/card
-                .row.d-none.d-md-flex.d-lg-none
-                    - for (var x = 0; x < 6; x++)
-                        include parts/card
-                .row.d-md-none
-                    - for (var x = 0; x < 3; x++)
-                        include parts/card
-                include parts/paginator
-    include inc/footer
+  include parts/header
+  section.section.section_brd-bot.after-fixed-nav
+    .c-container
+      h1.title Страницы
+      .row.justify-content-between.gap-t_lg
+        .col-md-6
+          h2.content-title.content-title_mid Анкета
+          ul
+            li
+              a.link(href="/anketa-order.html") Анкета-Заявка на получение бесплатного регистратора эмиссии
+            li
+              a.link(href="/anketa-order_popup.html") Попап Спасибо
+
+          h2.content-title.content-title_mid.gap-t_lg Поставщик
+          ul
+            li
+              a.link(href="/provider-auth.html") Авторизация ЛК
+            li
+              a.link(href="/provider-order-list.html") Список заявок
+            li
+              a.link(href="/provider-order-item.html") Завка
+            li
+              a.link(href="/provider-profile.html") Тест на готовность магазина к маркировке
+
+        .col-md-4
+          h3.content-title.content-title_mid Документация
+          ul
+            li
+              a.link(href="/elements.html") Элементы формы
+
+  include inc/footer

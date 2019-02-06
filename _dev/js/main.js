@@ -1,17 +1,21 @@
-var window$ = $(window),
-  windowWidth = $(window).innerWidth(),
-  document$ = $(document);
+var windowWidth = $(window).innerWidth();
 
-function toggleTabs(e) {
-  var tab_id = $(e).attr('data-tab');
+//переключение табов
+function toggleTabs() {
+  var tab = $('.js-tab');
 
-  $('.nav-tab__item').removeClass('active');
-  $('.nav-slide__item').addClass('d-none');
-
-  $(e).addClass('active');
-  $("#" + tab_id).removeClass('d-none');
+  tab.on('click', function(){
+    if(!$(this).hasClass('active')){
+      var tabId = $(this).attr('data-href');
+      tab.removeClass('active');
+      $(this).addClass('active');
+      $('.js-tab-content').addClass('d-none');
+      $(tabId).removeClass('d-none');
+    }
+  })
 }
 
+//textarea - рассчет высоты
 function changeHeightTextarea() {
   var txt = $('.js-text-area'),
     hiddenDiv = $(document.createElement('div')),
@@ -32,25 +36,12 @@ function changeHeightTextarea() {
   })
 }
 
-document$.ready(function () {
-  //export js
-  // $('.search1__current').on('click', function () {
-  //     $(this).parent().addClass('active').find('.search1__input').focus();
-  // });
-  //export js end
+$(document).ready(function () {
 
-  $('.nav-tab__item').click(function () {
-    toggleTabs(this);
-  })
-
-  $('.nav-tab-survey').click(function () {
-    toggleTabs($('.nav-tab__item:last-child'));
-  })
-
-  // toggleState('.initHover', '.targetHover', 'mouseenter mouseleave', 'active');
+   // toggleState('.initHover', '.targetHover', 'mouseenter mouseleave', 'active');
   // toggleState('.init', '.target', 'click', 'active');
 
-  window$.resize(function () {
+  $(window).resize(function () {
     if (windowWidth < 768) {
       selfToggleState('.js_sortingOption', 'click', 'active');
       selfToggleState('.js_tabsOption', 'click', 'active');
@@ -72,6 +63,9 @@ document$.ready(function () {
   if ($('.js-select').length) {
     $('.js-select').selectric();
   }
+
+  //tabs
+  toggleTabs();
 
   //filter
   openFilterMenu();
@@ -139,7 +133,7 @@ function selfToggleState(elem, event, className) {
     //     }
     // });
   });
-};
+}
 
 /**
  *
@@ -158,13 +152,13 @@ function eventOutOfElement(elem, className, event) {
       div.removeClass(className);
     }
   });
-};
+}
 
 function stateClear(elem, target, className, event) {
   $(elem).on(event, function () {
     $(target).removeClass(className);
   });
-};
+}
 
 //открытие-закрытие списка фильтров на мобилке
 function openFilterMenu() {
@@ -211,7 +205,8 @@ function selectFilter() {
       if (windowWidth >= 768){
         $this.insertAfter(listFilter[listFilter.length - 1]);
 
-        if (listFilter.length + 1 == allFilter.length) {
+        //удаляю список, если в нем больше нет городов
+        if (listFilter.length + 1 === allFilter.length) {
           subListLink.remove();
         }
       }
@@ -219,10 +214,9 @@ function selectFilter() {
       changeClass($this, listFilter);
     }
 
-
     function changeClass($this, listFilter) {
       for (var i = 0; i < listFilter.length; i++) {
-        if ($this[0] == listFilter[0]) {
+        if ($this[0] === listFilter[0]) {
           listFilter.removeClass('is-active');
           $(listFilter[0]).addClass('is-active');
         } else {

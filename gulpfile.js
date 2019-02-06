@@ -26,7 +26,6 @@ const path = {
     scss: '_dev/scss/',
     img: '_dev/img/*.*',
     js: '_dev/js/*.js',
-    html: '_dev/*.html',
     pug: '_dev/tmpl/*.pug'
   },
   watch: {
@@ -59,13 +58,14 @@ function browserSyncReload(done) {
 function styles() {
   return gulp
     .src(path.src.style)
+    .pipe(sourcemaps.init())
     .pipe(sass({
       errLogToConsole: true
     }))
     .on('error', console.log)
     .pipe(prefixer('last 3 versions'))
     .pipe(csso())
-    .pipe(sourcemaps.write('.'))
+    .pipe(sourcemaps.write('./maps'))
     .pipe(size())
     .pipe(gulp.dest(path.build.css))
     .pipe(browsersync.stream());
@@ -121,7 +121,7 @@ function watchFiles(){
   gulp.watch([path.watch.img], images);
   gulp.watch([path.watch.style], styles);
   gulp.watch([path.watch.js], js);
-  gulp.watch([path.src.pug], gulp.series(html, browserSyncReload));
+  gulp.watch([path.watch.pug], gulp.series(html, browserSyncReload));
 }
 
 // Tasks

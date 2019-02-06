@@ -1,0 +1,57 @@
+h2.content-title.gap-t Скачайте и&nbsp;отправьте заполненный шаблон <br>Анкеты-Заявки
+a.link.link_download(href="#")
+  | Скачать шаблон Анкеты-Заявки
+h3.content-title.content-title_mid.gap-t.gap-t_lg Отправьте заполненный шаблон Анкеты-Заявки
+form.form
+  .form__row.form__row_reset-mbl
+    .form__col
+      select.js-select
+        option(value="0" disabled selected).select-lbl Выберите тип компании
+        option(value="1") Пункт 1
+        option(value="2") Пункт 2
+        option(value="3") Пункт 3
+    .form__col
+      input.inp(placeholder="Введите имя и фамилию" type="text")
+  .form__row.form__row_reset-mbl
+    .form__col
+      input.inp(placeholder="Введите телефон" type="tel")
+    .form__col
+      input.inp(placeholder="Введите электронную почту" type="email")
+  .form__row
+    .form__col
+      textarea.inp-textarea.js-text-area(placeholder="Сообщение" rows="1" id="message")
+  .form__row
+    .form__col
+      .b-attach.js-attach
+        label.b-attach__add
+          input(type="file" name="file" id="file-inp").d-none
+          | Прикрепить Анкету-Заявку
+  .form__row
+    .form__col
+      .b-attach
+        .spinner
+        p.b-attach__txt 18%... Пожалуйста подождите, идет загрузка Анкеты
+  .form__row
+    .form__col
+      .b-attach.is-error
+        p.b-attach__txt Ошибка загрузки. Некорректный формат файла.&nbsp;
+          label.b-attach__add
+            input(type="file" name="file1" id="file-inp1").d-none
+            | Загрузить другой файл
+          | <br>Заявки принимаются только в&nbsp;оригинальном шаблоне. <a href="#" class="link">Скачать шаблон Анкеты-Заявки</a>
+  .form__row
+    .form__col
+      .b-attach
+        p.b-attach__txt Файл Anketa_Zayavka.xls успешно загружен!
+          label.b-attach__add.b-attach__add_other
+            input(type="file" name="file2" id="file-inp2").d-none
+            | Загрузить другой файл
+  .form__row
+    .form__col
+      img(src="img/cap-temp.png")
+  .form__row.form__row_reset-sm
+    .form__col.form__col_sm
+      button.btn.btn_primary.btn_reset-sm Отправить заявку
+  .form__row.form__row_last
+    .form__col
+      p.form__notes Нажимая &laquo;Отправить заявку&raquo;, вы&nbsp;соглашаетесь с&nbsp;условиями <a href="#" class="link">Пользовательского соглашения</a> <br>и&nbsp;на&nbsp;передачу данных 3-м лицам, необходимых для организации доставки бесплатных регистраторов выбытия.

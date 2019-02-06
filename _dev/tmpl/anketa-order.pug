@@ -10,7 +10,7 @@ block style
 block content
   include parts/header
 
-
+  //content-header
   section.section.section.section_m-pad.section_mobile-sm.after-fixed-nav
     .c-container
       .row
@@ -25,6 +25,9 @@ block content
       .row
         .col
           h1.title Анкета-Заявка на&nbsp;получение бесплатного регистратора эмиссии для&nbsp;аптек и&nbsp;медицинских организаций
+
+
+  //icon-section
   section.section.section_gray
     .c-container
       h2.content-title Для получения бесплатных регистраторов эмиссии
@@ -51,29 +54,30 @@ block content
             .iconbox__body
               p.iconbox__txt Получите ответ на&nbsp;указанную в&nbsp;заявке почту о&nbsp;графике доставки бесплатных регистраторов эмиссии в&nbsp;соответствии с&nbsp;указанной информацией
 
+
+  //main section
   section.section.section_gray.section_no-pad-top
     .c-container
       .row
+        //form content
         .col-lg-8
           .white-block.mh
             .nav-tab.js_outClick.js_tabsOption
               .nav-tab__wrapper
-                .nav-tab__item.nav-tab__item_icon.active
+                .nav-tab__item.nav-tab__item_icon.active.js-tab(data-href="#inn")
                   span.nav-tab__count 1
                   | Проверка ИНН
-                .nav-tab__item.nav-tab__item_icon
+                .nav-tab__item.nav-tab__item_icon.js-tab(data-href="#load")
                   span.nav-tab__count 2
                   | Загрузка Анкеты-Заявки
 
-            h2.content-title.gap-t Введите ИНН вашей организации для получения <br>бесплатных регистраторов выбытия
-            form.form
-              .form__row
-                .form__col
-                  input.inp(placeholder="ИНН" type="text")
-              .form__row.form__row_last.form__row_reset-sm
-                .form__col.form__col_sm
-                  button.btn.btn_primary.btn_reset-sm Проверить ИНН
+            #inn.js-tab-content
+              include parts/anketa/inn
 
+            #load.js-tab-content.d-none
+              include parts/anketa/load-anket
+
+        //aside block
         .col-lg-4
           .white-block
             h3.content-title Примечания
@@ -82,6 +86,7 @@ block content
               li При возникновении каких-либо проблем с&nbsp;получением шаблона Анкеты-Заявки и/или последующей загрузки ее&nbsp;на&nbsp;сайт&nbsp;&mdash; обращайтесь в&nbsp;службу поддержки на&nbsp;
                 a(href="mailto:support@crpt.ru").link support@crpt.ru
               li ЦРПТ оставляет за&nbsp;собой право самостоятельно принимать решение по&nbsp;предоставлению бесплатных регистраторов эмиссии на&nbsp;основе полученных заявок.
+
 
       .row.gap-t_m
         .col-lg-8
@@ -153,9 +158,7 @@ block content
                     a(href="mailto:support@crpt.ru").link support@crpt.ru
 
 
-
-
-
-
-
   include inc/footer
+
+block script
+  script(src="js/selectric.min.js")
