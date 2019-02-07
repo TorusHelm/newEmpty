@@ -125,13 +125,6 @@ function selfToggleState(elem, event, className) {
     } else {
       $this.attr('data-state', false);
     }
-    // $(document).on(event, function (e){
-    //     var div = $(elem);
-    //     if (!div.is(e.target)
-    //     && div.has(e.target).length === 0) {
-    //         div.removeClass(className);
-    //     }
-    // });
   });
 }
 
@@ -143,15 +136,12 @@ function selfToggleState(elem, event, className) {
  */
 
 function eventOutOfElement(elem, className, event) {
-  var eventLet = event,
-    elem = elem;
-  $(document).on(eventLet, function (e) {
-    var div = $(elem);
-    if (!div.is(e.target)
-      && div.has(e.target).length === 0) {
-      div.removeClass(className);
+  $(document).on(event, function (e) {
+    let $this = $(elem);
+    if (!$this.is(e.target) && $this.has(e.target).length === 0) {
+      $this.removeClass(className);
     }
-  });
+  })
 }
 
 function stateClear(elem, target, className, event) {

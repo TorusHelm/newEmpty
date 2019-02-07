@@ -27,10 +27,18 @@ block content
         .col
           .nav-tab.gap-t.js_outClick.js_tabsOption
             .nav-tab__wrapper
-              .nav-tab__item.active.js-tab(data-href="#step1") Маркировка табака с 1 марта 2019 года
-              .nav-tab__item.js-tab(data-href="#step2") Новые правила продажи табака
-              .nav-tab__item.js-tab(data-href="#step3") Что нужно для продажи по новым правилам
-              .nav-tab__item.js-tab(data-href="#step4") Тест на готовность магазина к маркировке
+              .nav-tab__item.nav-tab__item_icon.active.js-tab(data-href="#step1")
+                span.nav-tab__count 1
+                | Маркировка табака с 1.03.2019 года
+              .nav-tab__item.nav-tab__item_icon.js-tab(data-href="#step2")
+                span.nav-tab__count 2
+                | Новые правила продажи
+              .nav-tab__item.nav-tab__item_icon.js-tab(data-href="#step3")
+                span.nav-tab__count 3
+                | Что нужно для продажи
+              .nav-tab__item.nav-tab__item_icon.js-tab(data-href="#step4")
+                span.nav-tab__count 4
+                | Тест на&nbsp; готовность к&nbsp;маркировке
 
   #step1.js-tab-content
     section.section.section_gray.section_m-pad
