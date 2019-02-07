@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Личный кабинет Поставщика | Заявка</title>
+    <title>Типографика</title>
     <meta name="description" content="Описание страницы">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +9,7 @@
     <meta name="format-detection" content="telephone=no">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/ico">
     <link rel="stylesheet" href="css/exportStyle.css">
-    <link rel="stylesheet" href="css/lk-provider.css">
+    <link rel="stylesheet" href="css/all.css">
   </head>
   <body>
     <div class="page-wrap">
@@ -66,83 +66,107 @@
           </div>
         </div>
       </header>
-      <section class="section section_m-pad section_mobile-sm after-fixed-nav">
+      <section class="section section_brd-bot after-fixed-nav">
         <div class="c-container">
+          <h1 class="title">UI элементы</h1>
+          <h2 class="content-title gap-t_lg">Кнопки</h2>
+          <div class="row">
+            <div class="col-md-3">
+              <button class="btn btn_primary btn_w-100">Действие кнопка</button>
+            </div>
+            <div class="col-md-3">
+              <button class="btn btn_dark btn_w-100">Кнопка темная</button>
+            </div>
+            <div class="col-md-3">
+              <button class="btn btn_secondary btn_w-100">Кнопка второстепенная</button>
+            </div>
+            <div class="col-md-3">
+              <button class="btn btn_def btn_w-100" disabled>Кпонка задизаблена</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section_brd-bot after-fixed-nav">
+        <div class="c-container">
+          <h3 class="content-title">Фильтр</h3>
           <div class="row">
             <div class="col">
-              <div class="title-row">
-                <h1 class="title title-row__title">Заявка от&nbsp;ООО &laquo;Рога и&nbsp;копыта&raquo;</h1><a class="link link_back" href="/provider-order-list.html">К списку заявок</a>
+              <div class="filter gap-t">
+                <div class="filter__col"><span class="filter__lbl js-filter">Город<span class="filter__lbl-prefix">:</span></span>
+                  <ul class="filter__list list-filter js-list-filter">
+                    <li class="list-filter__item js-filter-item" data-href="all"><span class="list-filter__link">Все</span><span class="list-filter__count">18</span></li>
+                    <li class="list-filter__item js-filter-item is-active" data-href="moscow"><span class="list-filter__link">Москва</span><span class="list-filter__count">9</span><span class="list-filter__close"></span></li>
+                    <li class="list-filter__item js-filter-item" data-href="piter"><span class="list-filter__link">Санкт-Петербург</span><span class="list-filter__count">8</span><span class="list-filter__close"></span></li>
+                    <li class="list-filter__item js-filter-item" data-href="vladivostok"><span class="list-filter__link">Владивосток</span><span class="list-filter__count">1</span><span class="list-filter__close"></span></li>
+                    <li class="list-filter__item list-filter__item_sub-menu js-sub-list"><span class="list-filter__link">Другие города</span>
+                      <ul class="list-filter__sub-list">
+                        <li class="list-filter__item js-filter-item" data-href="ekat"><span class="list-filter__link">Екатеринбург</span><span class="list-filter__count">1</span><span class="list-filter__close"></span></li>
+                        <li class="list-filter__item js-filter-item" data-href="perm"><span class="list-filter__link">Пермь</span><span class="list-filter__count">1</span><span class="list-filter__close"></span></li>
+                        <li class="list-filter__item js-filter-item" data-href="chelyabinsk"><span class="list-filter__link">Челябинск</span><span class="list-filter__count">1</span><span class="list-filter__close"></span></li>
+                        <li class="list-filter__item js-filter-item" data-href="samara"><span class="list-filter__link">Самара</span><span class="list-filter__count">1</span><span class="list-filter__close"></span></li>
+                        <li class="list-filter__item js-filter-item" data-href="kazan"><span class="list-filter__link">Казань</span><span class="list-filter__count">1</span><span class="list-filter__close"></span></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="filter gap-t">
+                <div class="filter__col"><span class="filter__lbl js-filter">Статус<span class="filter__lbl-prefix">:</span></span>
+                  <ul class="filter__list list-filter js-list-filter">
+                    <li class="list-filter__item js-filter-item" data-href="all-status"><span class="list-filter__link">Все</span><span class="list-filter__count">18</span></li>
+                    <li class="list-filter__item js-filter-item" data-href="open"><span class="list-filter__link">Открыта</span><span class="list-filter__count">4</span><span class="list-filter__close"></span></li>
+                    <li class="list-filter__item js-filter-item" data-href="in-job"><span class="list-filter__link">В работе у меня</span><span class="list-filter__count">10</span><span class="list-filter__close"></span></li>
+                  </ul>
+                </div>
+                <div class="filter__col filter__col_right">
+                  <p class="filter__txt">У вас в работе 10 заявок.&nbsp;<span class="filter__txt_notes">Доступно еще 5 заявок.</span></p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="section section_m-pad section_no-pad-top d-md-none">
+      <section class="section section_brd-bot after-fixed-nav">
         <div class="c-container">
+          <h3 class="content-title">Табы</h3>
           <div class="row">
-            <div class="col-md-4">
-              <div class="b-aside">
-                <h3 class="b-aside__title">Заявка открыта</h3>
-                <button class="btn btn_primary b-aside__btn">Взять в работу</button>
+            <div class="col-lg-8">
+              <div class="nav-tab js_outClick js_tabsOption">
+                <div class="nav-tab__wrapper">
+                  <div class="nav-tab__item nav-tab__item_icon active js-tab" data-href="#inn"><span class="nav-tab__count">1</span>Проверка ИНН</div>
+                  <div class="nav-tab__item nav-tab__item_icon js-tab" data-href="#load"><span class="nav-tab__count">2</span>Загрузка Анкеты-Заявки</div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="section section_m-pad section_no-pad-top">
+      <section class="section section_gray section_brd-bot after-fixed-nav">
         <div class="c-container">
+          <h3 class="content-title">Иконки шагов в&nbsp;кружках</h3>
           <div class="row">
-            <div class="col-md-8">
-              <div class="fake-tbl fake-tbl_two-col">
-                <div class="fake-tbl__row">
-                  <div class="fake-tbl__col">Дата и время создания:</div>
-                  <div class="fake-tbl__col fake-tbl__col_name">21.01.2019 13:45</div>
-                </div>
-                <div class="fake-tbl__row">
-                  <div class="fake-tbl__col">Город:</div>
-                  <div class="fake-tbl__col fake-tbl__col_name">Москва</div>
-                </div>
-                <div class="fake-tbl__row">
-                  <div class="fake-tbl__col">Наличие онлайн-кассы:</div>
-                  <div class="fake-tbl__col fake-tbl__col_name">Есть (54-ФЗ)</div>
-                </div>
-                <div class="fake-tbl__row">
-                  <div class="fake-tbl__col">Наличие 2D-сканера:</div>
-                  <div class="fake-tbl__col fake-tbl__col_name">Нет</div>
-                </div>
-                <div class="fake-tbl__row">
-                  <div class="fake-tbl__col">Наличие кассовой программы:</div>
-                  <div class="fake-tbl__col fake-tbl__col_name">Нет, но нужна</div>
-                </div>
-              </div>
-              <h2 class="content-title content-title_mid">Контактные данные</h2>
-              <div class="fake-tbl fake-tbl_two-col">
-                <div class="fake-tbl__row">
-                  <div class="fake-tbl__col">ФИО:</div>
-                  <div class="fake-tbl__col fake-tbl__col_name">Константинопольский Александр Игоревич</div>
-                </div>
-                <div class="fake-tbl__row">
-                  <div class="fake-tbl__col">Название компании:</div>
-                  <div class="fake-tbl__col fake-tbl__col_name">ООО «Рога и копыта»</div>
-                </div>
-                <div class="fake-tbl__row">
-                  <div class="fake-tbl__col">Электронная почта:</div>
-                  <div class="fake-tbl__col fake-tbl__col_name">info@rg.ru</div>
-                </div>
-                <div class="fake-tbl__row">
-                  <div class="fake-tbl__col">Контактный телефон:</div>
-                  <div class="fake-tbl__col fake-tbl__col_name">+7 (495) 123-45-67</div>
+            <div class="col-md-4 col-sm-12">
+              <div class="iconbox iconbox_step iconbox_lg"><span class="iconbox__step">1</span>
+                <div class="iconbox__img"><img src="img/ico-inn.svg" alt=""></div>
+                <div class="iconbox__body">
+                  <p class="iconbox__txt">Введите ИНН вашей организации и&nbsp;скачайте ваш шаблон Анкеты-Заявки в&nbsp;Excel формате</p>
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
-              <div class="b-aside">
-                <h3 class="b-aside__title">Заявка открыта</h3>
-                <button class="btn btn_primary b-aside__btn">Взять в работу</button>
+            <div class="col-md-4 col-sm-12">
+              <div class="iconbox iconbox_step iconbox_lg"><span class="iconbox__step">2</span>
+                <div class="iconbox__img"><img src="img/ico-load-anketa.svg" alt=""></div>
+                <div class="iconbox__body">
+                  <p class="iconbox__txt">Загрузите заполненную Анкету-Заявку от&nbsp;вашей организации</p>
+                </div>
               </div>
-              <div class="b-aside gap-t">
-                <h3 class="b-aside__title">Заявка в работе</h3>
-                <button class="btn btn_def b-aside__btn">Закрыть заявку</button>
+            </div>
+            <div class="col-md-4 col-sm-12">
+              <div class="iconbox iconbox_step iconbox_last iconbox_lg"><span class="iconbox__step">3</span>
+                <div class="iconbox__img"><img src="img/ico-letter-answer.svg" alt=""></div>
+                <div class="iconbox__body">
+                  <p class="iconbox__txt">Получите ответ на&nbsp;указанную в&nbsp;заявке почту о&nbsp;графике доставки бесплатных регистраторов эмиссии в&nbsp;соответствии с&nbsp;указанной информацией</p>
+                </div>
               </div>
             </div>
           </div>
@@ -214,5 +238,6 @@
       </footer>
     </div>
     <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

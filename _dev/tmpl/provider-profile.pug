@@ -3,6 +3,8 @@ extends inc/base
 block title
   title= 'Тест на готовность магазина к маркировке'
   meta(name="description" content="Описание страницы")
+block style
+  link(rel='stylesheet', href='css/lk-provider.css')
 
 block content
   include parts/header
@@ -251,7 +253,7 @@ block content
                 .form__col.form__col_sm
                   input.radio(type="radio" name="cachbox" id="cashbox-no" value="no")
                   label.lbl(for="cashbox-no") Нет
-              .form__row.form__row_reset-mbl
+              .row.form__row.form__row_reset-mbl
                 .form__col.col-md-6
                   select.js-select
                     option(value="0" disabled selected).select-lbl Укажите производителя
@@ -307,3 +309,4 @@ block content
 
 block script
   script(src="js/selectric.min.js")
+  script(src="js/provider.js")

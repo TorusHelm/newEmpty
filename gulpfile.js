@@ -4,7 +4,7 @@ const gulp = require('gulp'),
       prefixer = require('gulp-autoprefixer'),
       uglify = require('gulp-uglify'),
       rollup = require('gulp-better-rollup'),
-      babel = require('rollup-plugin-babel'),
+      babel = require('gulp-babel'),
       sass = require('gulp-sass'),
       csso = require('gulp-csso'),
       imagemin = require('gulp-imagemin'),
@@ -98,9 +98,9 @@ function js() {
   return gulp
     .src(path.src.js)
     .pipe(sourcemaps.init())
-    .pipe(rollup({
-      plugins: [babel()],
-      format: 'umd',
+    .pipe(rollup({format: 'cjs'}))
+    .pipe(babel({
+      presets: ['@babel/env']
     }))
     .pipe(sourcemaps.write('./maps'))
     .pipe(gulp.dest(path.build.js))

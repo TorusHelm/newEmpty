@@ -4,7 +4,6 @@
     padding: .75em 1.5em;
     font-size: $fz-big / 2; //16px
     line-height: 1.5;
-    background-color: $bg-primary;
     color: $color-txt;
     display: inline-flex;
     min-width: 120px;
@@ -33,6 +32,7 @@
 
     &_dark{
         background-color: $bg-dark;
+        color: $color-white;
 
         &:hover{
             background-color: darken($bg-dark, 5%);
@@ -58,6 +58,11 @@
     //дефолтная кнопка
     &_def{
         background-color: $color-white;
+    }
+
+    //на всю ширину родителя
+    &_w-100{
+        width: 100%;
     }
 
     &_reset-sm{

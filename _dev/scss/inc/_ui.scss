@@ -154,7 +154,6 @@ input::-ms-clear {
     }
 }
 
-//TODO: надо доделать, сейчас некогда
 .inp-textarea{
     @extend .inp;
 
@@ -166,10 +165,6 @@ input::-ms-clear {
     line-height: 1.5;
     transition: all ease .2s;
     padding: .85em 0 0;
-
-    //&::placeholder{
-    //    line-height: 3em;
-    //}
 }
 
 //фейковое поле для рассыета высоты у textarea

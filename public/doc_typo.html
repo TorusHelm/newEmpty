@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title></title>
+    <title>Типографика</title>
     <meta name="description" content="Описание страницы">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -69,131 +69,35 @@
       <section class="section section_brd-bot after-fixed-nav">
         <div class="c-container">
           <div class="row">
+            <div class="col-md-12">
+              <h1 class="title">Заголовок страницы</h1>
+              <h2 class="title title_md gap-t">Заголовк секций, или средний заголовок</h2>
+              <h3 class="content-title gap-t">Заголовк контентной части</h3>
+              <h3 class="content-title_mid">Заголовк контентной части (среднего размера)</h3>
+              <div class="title-row gap-t">
+                <h3 class="title title-row__title">Заявка от&nbsp;ООО &laquo;Рога и&nbsp;копыта&raquo;</h3><a class="link link_back" href="/provider-order-list.html">К списку заявок</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section_brd-bot">
+        <div class="c-container">
+          <div class="row">
             <div class="col-md-6">
-              <form class="form">
-                <h1 class="form__title">Элементы формы</h1>
-                <div class="form__row">
-                  <div class="form__col">
-                    <input class="inp" type="text" placeholder="ФИО">
-                  </div>
-                </div>
-                <div class="form__row form__row_reset-mbl">
-                  <div class="form__col">
-                    <input class="inp" type="tel" placeholder="Телефон">
-                  </div>
-                  <div class="form__col">
-                    <input class="inp" type="email" placeholder="E-mail">
-                  </div>
-                </div>
-                <div class="form__row form__row_reset-mbl">
-                  <div class="form__col">
-                    <input class="inp" type="text" placeholder="Страна">
-                  </div>
-                  <div class="form__col">
-                    <input class="inp" type="text" placeholder="Город">
-                  </div>
-                  <div class="form__col">
-                    <input class="inp" type="text" placeholder="Адрес">
-                  </div>
-                </div>
-                <div class="form__row">
-                  <div class="form__col">
-                    <input class="inp inp_icon" placeholder="Ваш пароль" type="password" required><span class="inp-icon inp-icon_pass"></span>
-                  </div>
-                </div>
-                <div class="form__row form__row_reset-mbl gap-t">
-                  <div class="form__col form__col_sm">
-                    <input class="radio" type="radio" value="yes" name="cachbox" id="yes" checked>
-                    <label class="lbl" for="yes">Да</label>
-                  </div>
-                  <div class="form__col form__col_sm">
-                    <input class="radio" type="radio" name="cachbox" id="program-no" value="no">
-                    <label class="lbl" for="program-no">Нет</label>
-                  </div>
-                  <div class="form__col">
-                    <input class="checkbox" type="checkbox" name="agree" id="agree" checked>
-                    <label class="lbl" for="agree">Условия прочитал</label>
-                  </div>
-                </div>
-                <div class="form__row">
-                  <div class="form__col">
-                    <textarea class="inp-textarea js-text-area" placeholder="Сообщение" rows="1" id="message"></textarea>
-                  </div>
-                </div>
-              </form>
+              <h3 class="content-title content-title_mid">Ссылки</h3>
+              <p class="gap-t"><a class="link" href="#">Ссылка в тексте</a></p>
+              <p><a class="link link_back" href="#">Ссылка назад</a></p>
+              <p><a class="link link_btn" href="#">Ссылка с высотой как у кнопки</a></p>
+              <p><a class="link link_download" href="#">Ссылка на скачивание</a></p>
             </div>
-          </div>
-        </div>
-      </section>
-      <section class="section">
-        <div class="c-container">
-          <div class="row">
-            <div class="col">
-              <form class="form">
-                <h1 class="form__title">Поля ввода</h1>
-                <div class="form__row form__row_reset-mbl">
-                  <div class="form__col">
-                    <input class="inp" type="text" value="Не активное состояние" disabled>
-                  </div>
-                  <div class="form__col">
-                    <input class="inp is-focus" type="text" value="Активное состояние">
-                  </div>
-                  <div class="form__col">
-                    <input class="inp" type="text" value="Поле заполнено"><span class="inp-notes">Подсказка к полю</span>
-                  </div>
-                  <div class="form__col is-error">
-                    <input class="inp" type="text" value="kjfdkjsk"><span class="inp-notes">Ошибка</span>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="section section_no-pad-top">
-        <div class="c-container">
-          <div class="row">
-            <div class="col">
-              <form class="form">
-                <h1 class="form__title">Выпадающие списки
-                  <div class="form__row form__row_reset-mbl">
-                    <div class="form__col">
-                      <select class="js-select">
-                        <option class="select-lbl" value="0" disabled selected>Выбор списка</option>
-                        <option value="1">Пункт 1</option>
-                        <option value="2">Пункт 2</option>
-                        <option value="3">Пункт 3</option>
-                      </select>
-                    </div>
-                    <div class="form__col">
-                      <select class="js-select" disabled>
-                        <option class="select-lbl" value="0" disabled selected>Укажите пункт</option>
-                        <option value="1">Пункт 1</option>
-                        <option value="2">Пункт 2</option>
-                        <option value="3">Пункт 3</option>
-                      </select>
-                    </div>
-                    <div class="form__col">
-                      <select class="js-select multiple" multiple>
-                        <option class="select-lbl" value="0" disabled>Выбор списка</option>
-                        <option value="1">Пункт 1</option>
-                        <option value="2">Пункт 2</option>
-                        <option value="3">Пункт 3</option>
-                        <option value="4">Пункт 4</option>
-                      </select>
-                    </div>
-                    <div class="form__col">
-                      <select class="js-select multiple" multiple disabled>
-                        <option class="select-lbl" value="0" disabled>Выбор списка</option>
-                        <option value="1">Пункт 1</option>
-                        <option value="2">Пункт 2</option>
-                        <option value="3">Пункт 3</option>
-                        <option value="4">Пункт 4</option>
-                      </select>
-                    </div>
-                  </div>
-                </h1>
-              </form>
+            <div class="col-md-6">
+              <h3 class="content-title content-title_mid">Списки</h3>
+              <ul class="list list_def">
+                <li> Пункт 1</li>
+                <li> Пункт 2</li>
+                <li> Пункт 3</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -264,9 +168,5 @@
       </footer>
     </div>
     <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/selectric.min.js"></script>
-    <script src="js/forms.js"></script>
-    <!--script(src="js/main.js")-->
-    <!--script(src="js/main.js")-->
   </body>
 </html>

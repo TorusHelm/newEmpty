@@ -1,19 +1,30 @@
 extends inc/base
 
 block title
-  title= 'Личный кабинет Поставщика | Список заявок'
+  title= 'Типографика'
   meta(name="description" content="Описание страницы")
-block style
-  link(rel='stylesheet', href='css/lk-provider.css')
 
 block content
   include parts/header
-
-  section.section.section_m-pad.section_mobile-sm.after-fixed-nav
+  section.section.section_brd-bot.after-fixed-nav
     .c-container
+      h1.title UI элементы
+      h2.content-title.gap-t_lg Кнопки
+      .row
+        .col-md-3
+          button.btn.btn_primary.btn_w-100 Действие кнопка
+        .col-md-3
+          button.btn.btn_dark.btn_w-100 Кнопка темная
+        .col-md-3
+          button.btn.btn_secondary.btn_w-100 Кнопка второстепенная
+        .col-md-3
+          button.btn.btn_def.btn_w-100(disabled) Кпонка задизаблена
+
+  section.section.section_brd-bot.after-fixed-nav
+    .c-container
+      h3.content-title Фильтр
       .row
         .col
-          h1.title Список заявок
           .filter.gap-t
             .filter__col
               span.filter__lbl.js-filter Город
@@ -83,43 +94,49 @@ block content
 
 
 
-  section.section.section_no-pad-top.section_m-pad
+
+
+  section.section.section_brd-bot.after-fixed-nav
     .c-container
+      h3.content-title Табы
       .row
-        .col
-          .fake-tbl.gap-t_m
-            a(href="/provider-order-item.html").fake-tbl__row
-              span.fake-tbl__col.fake-tbl__col_date 21.01.2019 13:45
-              span.fake-tbl__col.fake-tbl__col_name ООО «Рога и копыта»
-              span.fake-tbl__col Москва
-              span.fake-tbl__col Открыта
-              span.fake-tbl__col.fake-tbl__col_link Перейти к заявке
-            a(href="/provider-order-item.html").fake-tbl__row
-              span.fake-tbl__col.fake-tbl__col_date 21.01.2019 13:45
-              span.fake-tbl__col.fake-tbl__col_name ООО «Рога и копыта»
-              span.fake-tbl__col Москва
-              span.fake-tbl__col Открыта
-              span.fake-tbl__col.fake-tbl__col_link Перейти к заявке
-            a(href="/provider-order-item.html").fake-tbl__row
-              span.fake-tbl__col.fake-tbl__col_date 21.01.2019 13:45
-              span.fake-tbl__col.fake-tbl__col_name ООО «Рога и копыта»
-              span.fake-tbl__col Москва
-              span.fake-tbl__col В работе у меня
-              span.fake-tbl__col.fake-tbl__col_link Перейти к заявке
-            a(href="/provider-order-item.html").fake-tbl__row
-              span.fake-tbl__col.fake-tbl__col_date 21.01.2019 13:45
-              span.fake-tbl__col.fake-tbl__col_name ООО «Рога и копыта»
-              span.fake-tbl__col Москва
-              span.fake-tbl__col Открыта
-              span.fake-tbl__col.fake-tbl__col_link Перейти к заявке
-            a(href="/provider-order-item.html").fake-tbl__row
-              span.fake-tbl__col.fake-tbl__col_date 21.01.2019 13:45
-              span.fake-tbl__col.fake-tbl__col_name ООО «Рога и копыта» ООО «Рога и копыта»ООО «Рога и копыта» ООО «Рога и копыта» ООО «Рога и копыта» ООО «Рога и копыта» ООО «Рога и копыта»
-              span.fake-tbl__col Москва
-              span.fake-tbl__col В работе у меня
-              span.fake-tbl__col.fake-tbl__col_link Перейти к заявке
+        .col-lg-8
+          .nav-tab.js_outClick.js_tabsOption
+            .nav-tab__wrapper
+              .nav-tab__item.nav-tab__item_icon.active.js-tab(data-href="#inn")
+                span.nav-tab__count 1
+                | Проверка ИНН
+              .nav-tab__item.nav-tab__item_icon.js-tab(data-href="#load")
+                span.nav-tab__count 2
+                | Загрузка Анкеты-Заявки
+
+  section.section.section_gray.section_brd-bot.after-fixed-nav
+    .c-container
+      h3.content-title Иконки шагов в&nbsp;кружках
+      .row
+        .col-md-4.col-sm-12
+          .iconbox.iconbox_step.iconbox_lg
+            span.iconbox__step 1
+            .iconbox__img
+              img(src="img/ico-inn.svg" alt="")
+            .iconbox__body
+              p.iconbox__txt Введите ИНН вашей организации и&nbsp;скачайте ваш шаблон Анкеты-Заявки в&nbsp;Excel формате
+        .col-md-4.col-sm-12
+          .iconbox.iconbox_step.iconbox_lg
+            span.iconbox__step 2
+            .iconbox__img
+              img(src="img/ico-load-anketa.svg" alt="")
+            .iconbox__body
+              p.iconbox__txt Загрузите заполненную Анкету-Заявку от&nbsp;вашей организации
+        .col-md-4.col-sm-12
+          .iconbox.iconbox_step.iconbox_last.iconbox_lg
+            span.iconbox__step 3
+            .iconbox__img
+              img(src="img/ico-letter-answer.svg" alt="")
+            .iconbox__body
+              p.iconbox__txt Получите ответ на&nbsp;указанную в&nbsp;заявке почту о&nbsp;графике доставки бесплатных регистраторов эмиссии в&nbsp;соответствии с&nbsp;указанной информацией
 
   include inc/footer
 
 block script
-  script(src="js/provider.js")
+  script(src="js/main.js")
