@@ -98,11 +98,21 @@ function js() {
   return gulp
     .src(path.src.js)
     .pipe(sourcemaps.init())
-    .pipe(rollup({plugins: [babel()]}, 'umd'))
+    .pipe(rollup({
+      plugins: [babel()],
+      format: 'umd',
+    }))
     .pipe(sourcemaps.write('./maps'))
-    // .pipe(uglify())
     .pipe(gulp.dest(path.build.js))
     .pipe(browsersync.stream());
+}
+
+//minify js
+function releaseJS(){
+  return gulp
+    .src('public/js/*.js')
+    .pipe(uglify())
+    .pipe(gulp.dest(path.build.js))
 }
 
 // pug error
@@ -133,6 +143,7 @@ gulp.task("images", images);
 gulp.task("css", styles);
 gulp.task("js", js);
 gulp.task("html", html);
+gulp.task("releaseJS", releaseJS);
 
 gulp.task('build', gulp.parallel(styles, images, js, html));
 

@@ -1,6 +1,9 @@
 /node_modules
 /.idea
-/../.idea/
-/public
+/public/css/maps
+/public/js/maps
+/public/fonts
+/_dev/img
 /*.psd
+/*.xd
 package-lock.json

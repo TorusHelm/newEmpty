@@ -1,4 +1,4 @@
-import {changeHeightTextarea, textarea} from './modules/textarea'
+import {changeHeightTextarea} from './modules/textarea'
 
 $(document).ready(function(){
   changeHeightTextarea();

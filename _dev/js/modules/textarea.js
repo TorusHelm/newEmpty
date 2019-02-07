@@ -20,6 +20,4 @@ function changeHeightTextarea() {
   })
 }
 
-// changeHeightTextarea();
-
 export {changeHeightTextarea}
