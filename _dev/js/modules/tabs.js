@@ -4,6 +4,8 @@ function toggleTabs() {
 
   tab.on('click', function(){
 
+    changeHeightTab($(this));
+
     if(!$(this).hasClass('active')){
       let tabId = $(this).attr('data-href');
       tab.removeClass('active');
@@ -11,7 +13,16 @@ function toggleTabs() {
       $('.js-tab-content').addClass('d-none');
       $(tabId).removeClass('d-none');
     }
-  })
+  });
+
+  //выпадающий список табов на мобилке
+  //задаю высоту, чтобы не скакал контент
+  function changeHeightTab(tab){
+    if($(window).innerWidth() < 768){
+      let tabHeight = tab.innerHeight();
+      tab.closest('.js_tabsOption').css('height', tabHeight);
+    }
+  }
 }
 
 //клик внеэлемента

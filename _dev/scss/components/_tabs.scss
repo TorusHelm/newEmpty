@@ -3,7 +3,6 @@
 
     @include respondTo(mobile){
         flex-direction: column;
-        min-height: 48px; //костыль, чтобы не прыгал контент под списком
         border-bottom: none;
         position: relative;
     }
@@ -28,18 +27,18 @@
     }
 
     &__item{
-        line-height: 1.5;
+        line-height: 1.25;
         color: $color-txt;
         position: relative;
         cursor: pointer;
         font-size: $fz-big / 2;
         text-decoration: none;
-        padding: 1em;
+        padding: 1em 1.5em;
         font-weight: normal;
         display: flex;
         justify-content: center;
         align-items: center;
-        white-space: nowrap;
+        //white-space: nowrap;
 
         @include respondTo(tablet){
             padding: 14px 16px;
@@ -50,7 +49,7 @@
         @include respondTo(mobile){
             padding: 14px 0;
             justify-content: left;
-            white-space: normal;
+            //white-space: normal;
             display: none;
 
             @at-root .active &{
@@ -62,16 +61,11 @@
             text-decoration: underline;
         }
 
-        &:last-child{
-            margin-right: 0;
-        }
-
         &_icon{
-            padding-left: 2.33em;
-            margin-right: 1em;
+            padding-left: 3.53em;
 
             @include respondTo(mobile){
-                margin-right: 0;
+                padding-left: 2.33em;
             }
         }
 
@@ -88,7 +82,7 @@
                     content: '';
                     position: absolute;
                     right: 10px;
-                    top: 1.5em;
+                    top: 50%;
                     width: 0;
                     height: 0;
                     border: 4px solid transparent;
@@ -139,11 +133,11 @@
         background-color: $color-border;
         flex-shrink: 0;
         position: absolute;
-        left: 0;
+        left: 1.5em;
         top: calc(50% - 1em);
 
         @include respondTo(mobile){
-            top: 1em;
+            left: 0;
         }
     }
 }
