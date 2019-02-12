@@ -110,8 +110,6 @@ function filtrationStatus() {
 
 //смена статуса
 function changeStatus(elem) {
-  console.log(111, elem);
-
   let status = elem.attr('data-status');
   $(linkStatus).removeClass('is-active');
   $(elem).addClass('is-active');

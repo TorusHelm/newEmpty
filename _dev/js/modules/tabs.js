@@ -9,7 +9,7 @@ function toggleTabs() {
     if(!$(this).hasClass('active')){
       let tabId = $(this).attr('data-href');
       tab.removeClass('active');
-      $(this).addClass('active');
+      $('.js-tab[data-href="'+ tabId +'"]').addClass('active');//т.к. есть кнопка помимо самих табов
       $('.js-tab-content').addClass('d-none');
       $(tabId).removeClass('d-none');
     }
