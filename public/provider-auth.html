@@ -88,13 +88,23 @@
                     <h1 class="form__title">Авторизация</h1>
                     <p class="form__txt">Введите ваш логин и&nbsp;пароль для входа<br> в&nbsp;Личный кабинет Поставщика</p>
                     <div class="form__row">
-                      <div class="form__col is-error">
-                        <input class="inp" placeholder="Ваш логин" type="text" value="kjfdkjsk" required><span class="inp-notes">Ошибка</span>
+                      <div class="form__col">
+                        <input class="inp" placeholder="Ваш логин" type="text" value="kjfdkjsk" required>
                       </div>
                     </div>
                     <div class="form__row">
                       <div class="form__col">
-                        <input class="inp inp_icon" placeholder="Ваш пароль" type="password" required><span class="inp-icon inp-icon_pass"></span>
+                        <input class="inp inp_icon" placeholder="Ваш пароль" type="password" required><span class="inp-icon inp-icon_pass js-view-pass"></span>
+                      </div>
+                    </div>
+                    <div class="form__row">
+                      <div class="form__col">
+                        <div class="b-info b-info_error gap-t_xs"><img class="b-info__ico" src="img/ico-error.svg" alt="error">
+                          <div class="b-info__body">
+                            <p class="b-info__txt">Вы&nbsp;ввели неверный пароль или логин.</p>
+                            <p class="b-info__txt">Попробуйте еще раз.</p>
+                          </div>
+                        </div>
                       </div>
                     </div>
                     <div class="form__row form__row_reset-sm form__row_last">
@@ -181,5 +191,6 @@
       </footer>
     </div>
     <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

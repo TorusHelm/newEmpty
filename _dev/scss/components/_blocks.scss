@@ -248,3 +248,36 @@
         margin-right: 16px;
     }
 }
+
+//информационный блок,
+// ошибка, предупреждение, сопустсвующая информаций
+.b-info{
+    font-size: 16px;
+    padding: 1em 1.5em;
+    display: flex;
+    align-items: center;
+
+    @include respondTo(small){
+        padding: 1.25em;
+    }
+
+    &_error{
+        background-color: $color-error-bg;
+
+        & .b-info__txt{
+            color: $color-error;
+        }
+    }
+
+    &__ico{
+        flex-shrink: 0;
+        width: 2em;
+        height: 2em;
+        margin-right: .75em;
+    }
+
+    &__txt{
+        font-family: $ff-base;
+        line-height: 1.5;
+    }
+}

@@ -48,8 +48,8 @@ input:-webkit-autofill {
     background-color: transparent;
 }
 
-//убираю крестик в IE
-input::-ms-clear {
+//убираю крестик и глаз в IE
+input::-ms-clear, input::-ms-reveal {
     display: none;
 }
 
@@ -132,6 +132,7 @@ input::-ms-clear {
     color: #cccccc;
     overflow: hidden;
     text-overflow: ellipsis;
+    z-index: 10;
 
     @at-root .is-error &{
         color: $color-error;

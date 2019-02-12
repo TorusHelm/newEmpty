@@ -28,13 +28,21 @@ block content
                 h1.form__title Авторизация
                 p.form__txt Введите ваш логин и&nbsp;пароль для входа<br> в&nbsp;Личный кабинет Поставщика
                 .form__row
-                  .form__col.is-error
+                  .form__col
                     input.inp(placeholder="Ваш логин" type="text" value="kjfdkjsk" required)
-                    span.inp-notes Ошибка
                 .form__row
                   .form__col
                     input.inp.inp_icon(placeholder="Ваш пароль" type="password" required)
-                    span.inp-icon.inp-icon_pass
+                    span.inp-icon.inp-icon_pass.js-view-pass
+                .form__row
+                  .form__col
+                    .b-info.b-info_error.gap-t_xs
+                      img(src="img/ico-error.svg" alt="error").b-info__ico
+                      .b-info__body
+                        p.b-info__txt Вы&nbsp;ввели неверный пароль или логин.
+                        p.b-info__txt Попробуйте еще раз.
+
+
                 .form__row.form__row_reset-sm.form__row_last
                   .form__col.form__col_sm
                     button.btn.btn_primary.btn_reset-sm Войти
@@ -49,3 +57,6 @@ block content
 
 
   include inc/footer
+
+block script
+  script(src="js/main.js")

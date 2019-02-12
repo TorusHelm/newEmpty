@@ -1,3 +1,5 @@
+import { showPass } from "./modules/showPass";
+
 var windowWidth = $(window).innerWidth();
 
 //переключение табов
@@ -37,6 +39,7 @@ function changeHeightTextarea() {
 }
 
 $(document).ready(function () {
+  showPass();
 
    // toggleState('.initHover', '.targetHover', 'mouseenter mouseleave', 'active');
   // toggleState('.init', '.target', 'click', 'active');
