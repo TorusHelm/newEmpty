@@ -3,11 +3,6 @@ export function showPass(){
   link.on('click', function(){
     let inp = $(this).siblings();
     let inpType = inp.prop('type');
-    if(inpType === 'password'){
-      inp.prop('type', 'text')
-    }
-    else{
-      inp.prop('type', 'password')
-    }
+    (inpType === 'password') ? inp.prop('type', 'text') : inp.prop('type', 'password');
   })
 }
