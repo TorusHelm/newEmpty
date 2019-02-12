@@ -32,7 +32,7 @@ const path = {
   watch: {
     style: '_dev/scss/**/*.scss',
     img: '_dev/img/*.*',
-    js: '_dev/js/*',
+    js: '_dev/js/**/*.js',
     html: '_dev/*.html',
     pug: '_dev/tmpl/**/*.pug'
   },

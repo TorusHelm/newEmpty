@@ -86,18 +86,10 @@ $color-disabled: #898987;
 .selectric-focus .selectric {
     border-color: $color-primary;
 }
-//
-//.selectric-hover .selectric {
-//    border-color: darken($selectric-main-color, 10%);
-//
-//    .button {
-//        color: darken($selectric-secondary-color, 10%);
-//
-//        &:after {
-//            border-top-color: darken($selectric-secondary-color, 10%);
-//        }
-//    }
-//}
+
+.is-error .selectric {
+    border-color: $color-error;
+}
 
 .selectric-open {
     z-index: 9999;
