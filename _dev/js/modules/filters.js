@@ -1,6 +1,4 @@
 const windowWidth = $(window).innerWidth();
-const allOrders = $('.js-order');
-const linkStatus = $('.js-status');
 
 //открытие-закрытие списка фильтров на мобилке
 function openFilterMenu() {
@@ -62,6 +60,7 @@ function initFilter($this){
   }
 
   function changeClass($this, listFilter) {
+    const allOrders = $('.js-order');
     for (let i = 0; i < listFilter.length; i++) {
       if ($this[0] === listFilter[0]) {
         listFilter.removeClass('is-active');
@@ -102,6 +101,7 @@ function filtrationCity() {
 
 //фильтр для статуса
 function filtrationStatus() {
+  const linkStatus = $('.js-status');
   linkStatus.on('click', function () {
     changeStatus($(this));
     saveStatusFilter();
@@ -110,6 +110,7 @@ function filtrationStatus() {
 
 //смена статуса
 function changeStatus(elem) {
+  const linkStatus = $('.js-status');
   let status = elem.attr('data-status');
   $(linkStatus).removeClass('is-active');
   $(elem).addClass('is-active');
@@ -156,6 +157,7 @@ function saveCityFilter() {
 
 // подгружаю выбранные значения для города
 function enterSaveCityFilter(){
+  const allOrders = $('.js-order');
   if (localStorage.getItem("storeCity")) {
 
     let filterCity = localStorage.getItem("storeCity");
