@@ -70,3 +70,8 @@
     height: 100%;
     background-color: rgba(#63666A, .7);
 }
+
+//fix header на сайте
+.top-background1 .page-line{
+    box-sizing: content-box;
+}
