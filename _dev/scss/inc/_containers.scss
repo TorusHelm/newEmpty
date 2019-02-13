@@ -2,16 +2,9 @@
     max-width: 1260px;
     margin: 0 auto;
     width: 100%;
+    padding: 0 10px;
 
-    @include respondTo(containerFix){
-        padding: 0 15px;
-    }
-
-    @include respondTo(tablet){
-        padding: 0 32px;
-    }
-
-    @include respondTo(mobile){
+    @media screen and (max-width: 1279px) {
         padding: 0 20px;
     }
 }
