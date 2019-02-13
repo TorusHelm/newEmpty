@@ -145,8 +145,17 @@ function enterSaveStatusFilter() {
 
 
 function saveCityFilter() {
-  var filterCity = $('#filter-city').html();
-  localStorage.setItem('storeCity', filterCity);
+  var filterCity = {};
+  var cityActive = $('.js-city.is-active');
+  var cityNum = cityActive.length;
+
+  for (var i = 0; i < cityNum; i++) {
+    filterCity[i] = $(cityActive[i]).attr('data-href');
+  }
+
+  var str = JSON.stringify(filterCity);
+  localStorage.setItem('storeCity', str);
+  localStorage.setItem('cityNum', cityNum);
 } // подгружаю выбранные значения для города
 
 
@@ -155,9 +164,18 @@ function enterSaveCityFilter() {
 
   if (localStorage.getItem("storeCity")) {
     var filterCity = localStorage.getItem("storeCity");
-    $('#filter-city').html(filterCity);
+    var cityNum = localStorage.getItem("cityNum");
 
-    if ($('.js-city.is-active').length) {
+    if (cityNum > 0) {
+      $('.js-filter-item').removeClass('is-active');
+      var city = JSON.parse(filterCity);
+      var cityFilter;
+
+      for (var i = 0; i < cityNum; i++) {
+        cityFilter = $('.js-city[data-href=' + city[i] + ']');
+        initFilter(cityFilter);
+      }
+
       allOrders.addClass('d-none').removeClass('js-f-order');
     } else {
       allOrders.removeClass('d-none').addClass('js-f-order');
