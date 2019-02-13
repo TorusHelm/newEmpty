@@ -135,16 +135,21 @@ function changeStatus(elem) {
 
 //сохраняю выбор статуса
 function saveStatusFilter() {
-  let filterStatus = $('.js-status.is-active').attr('data-status');
-  localStorage.setItem('storeStatus', filterStatus);
+  // let filterStatus = $('.js-status.is-active').attr('data-status');
+  let filterStatus = {};
+  filterStatus = $('.js-status.is-active').attr('data-status');
+  let str = JSON.stringify(filterStatus);
+  console.log(str);
+  localStorage.setItem('storeStatus', str);
 }
 
 // подгружаю выбранные значения для статуса
 function enterSaveStatusFilter(){
   if (localStorage.getItem("storeStatus")) {
     let filterStatus = localStorage.getItem("storeStatus");
+    let status = JSON.parse(filterStatus);
 
-    let t = $('.js-status[data-status='+ filterStatus +']');
+    let t = $('.js-status[data-status='+ status +']');
     changeStatus(t);
   }
 }

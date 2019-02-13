@@ -130,15 +130,20 @@ function changeStatus(elem) {
 
 
 function saveStatusFilter() {
-  var filterStatus = $('.js-status.is-active').attr('data-status');
-  localStorage.setItem('storeStatus', filterStatus);
+  // let filterStatus = $('.js-status.is-active').attr('data-status');
+  var filterStatus = {};
+  filterStatus = $('.js-status.is-active').attr('data-status');
+  var str = JSON.stringify(filterStatus);
+  console.log(str);
+  localStorage.setItem('storeStatus', str);
 } // подгружаю выбранные значения для статуса
 
 
 function enterSaveStatusFilter() {
   if (localStorage.getItem("storeStatus")) {
     var filterStatus = localStorage.getItem("storeStatus");
-    var t = $('.js-status[data-status=' + filterStatus + ']');
+    var status = JSON.parse(filterStatus);
+    var t = $('.js-status[data-status=' + status + ']');
     changeStatus(t);
   }
 } // запоминаю выбранные значения для города
