@@ -124,28 +124,11 @@ function changeStatus(elem) {
     $('.js-f-order').filter(function (index) {
       return $(this).attr("data-status") === status;
     }).removeClass('d-none');
-  } // if($('.js-f-order').length){
-  //   if (status === 'all-status') {
-  //     $('.js-f-order').removeClass('d-none');
-  //     // filtrationCity();
-  //   } else {
-  //     $('.js-f-order').addClass('d-none');
-  //     $('.js-f-order').filter(function (index) {
-  //       return $(this).attr("data-status") === status;
-  //     })
-  //       .removeClass('d-none');
-  //   }
-  // }
-  // else{
-  //   $('.js-order').addClass('js-f-order');
-  //   // changeStatus($('.js-status.is-active'));
-  // }
-
+  }
 } //сохраняю выбор статуса
 
 
 function saveStatusFilter() {
-  // let filterStatus = $('.js-status.is-active').attr('data-status');
   var filterStatus = {};
   filterStatus = $('.js-status.is-active').attr('data-status');
   var str = JSON.stringify(filterStatus);
