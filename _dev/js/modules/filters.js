@@ -115,22 +115,36 @@ function changeStatus(elem) {
   $(linkStatus).removeClass('is-active');
   $(elem).addClass('is-active');
 
-  if($('.js-f-order').length){
-    if (status === 'all-status') {
-      $('.js-f-order').removeClass('d-none');
-      // filtrationCity();
-    } else {
-      $('.js-f-order').addClass('d-none');
-      $('.js-f-order').filter(function (index) {
-        return $(this).attr("data-status") === status;
-      })
-        .removeClass('d-none');
-    }
-  }
-  else{
+  if(!$('.js-f-order').length){
     $('.js-order').addClass('js-f-order');
-    changeStatus($('.js-status.is-active'));
   }
+
+  if (status === 'all-status') {
+    $('.js-f-order').removeClass('d-none');
+  } else {
+    $('.js-f-order').addClass('d-none');
+    $('.js-f-order').filter(function (index) {
+      return $(this).attr("data-status") === status;
+    })
+      .removeClass('d-none');
+  }
+
+  // if($('.js-f-order').length){
+  //   if (status === 'all-status') {
+  //     $('.js-f-order').removeClass('d-none');
+  //     // filtrationCity();
+  //   } else {
+  //     $('.js-f-order').addClass('d-none');
+  //     $('.js-f-order').filter(function (index) {
+  //       return $(this).attr("data-status") === status;
+  //     })
+  //       .removeClass('d-none');
+  //   }
+  // }
+  // else{
+  //   $('.js-order').addClass('js-f-order');
+  //   // changeStatus($('.js-status.is-active'));
+  // }
 }
 
 //сохраняю выбор статуса
@@ -139,7 +153,6 @@ function saveStatusFilter() {
   let filterStatus = {};
   filterStatus = $('.js-status.is-active').attr('data-status');
   let str = JSON.stringify(filterStatus);
-  console.log(str);
   localStorage.setItem('storeStatus', str);
 }
 
@@ -156,7 +169,6 @@ function enterSaveStatusFilter(){
 
 // запоминаю выбранные значения для города
 function saveCityFilter() {
-
   let filterCity = {};
   let cityActive = $('.js-city.is-active');
   let cityNum = cityActive.length;
@@ -190,7 +202,6 @@ function enterSaveCityFilter(){
     else{
       allOrders.removeClass('d-none').addClass('js-f-order');
     }
-
     filtrationCity();
   }
 }
