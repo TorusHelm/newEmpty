@@ -37,6 +37,10 @@ $color-error: #A94442;
 .inp[type="password"] {
     letter-spacing: 4px;
 
+    &:-ms-input-placeholder{
+        letter-spacing: normal;
+    }
+
     &::placeholder{
         letter-spacing: normal;
     }
