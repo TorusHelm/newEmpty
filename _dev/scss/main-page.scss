@@ -97,6 +97,7 @@
 //блок с формой убираю нг тематику
 .block-form-potrebitelyam-background{
     background: #63666A;
-    left: 0;
-    width: 100%;
+    left: -90px;
+    right: -90px;
+    width: calc(100% + 180px);
 }
