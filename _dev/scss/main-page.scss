@@ -21,21 +21,23 @@
         max-width: 100%;
     }
 
+    &__over{
+        & .block14__title{
+            font-size: 36px;
+            line-height: 1.33;
+            padding-bottom: .66em;
+        }
+
+        & .block14__p{
+            //т.к. на сайте уже задан important
+            //перебиваю его
+            font-size: 15px !important;
+            line-height: 1.6em !important;
+        }
+    }
+
     &__right{
         padding: 30px 0 44px 60px;
-    }
-
-    &__title{
-        font-size: 36px;
-        line-height: 1.33;
-        padding-bottom: .66em;
-    }
-
-    //т.к. на сайте уже задан important
-    //перебиваю его
-    &__p{
-        font-size: 15px !important;
-        line-height: 1.6em !important;
     }
 }
 
@@ -53,7 +55,7 @@
 //убираю ненужные отсутпы
 .block-form-potrebitelyam .modal-up__content{
     top: 0;
-    margin-top: 0;
+    margin: 0 auto;
 }
 
 //блок с формой убираю нг тематику
