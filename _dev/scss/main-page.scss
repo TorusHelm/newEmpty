@@ -1,0 +1,62 @@
+//******* block14 *******//
+// block14-share - удаляем совсем
+// block14__left - удаляем все, что внутри
+// внутри block14__left вставляем картинку customers-hero-image.jpg c классом block14__hero-img
+// block14__right - убираем класс: .block14__right_bg и атрибут style со всем содержимым
+// block14__title и block14__p - меняем контент
+
+//******* block15 *******//
+//block15 - удаляем совсем
+
+//******* block12-background-snow *******//
+//block12-background-snow - удаляем совсем
+
+
+//блок hero
+.block14{
+
+    //картинка для баннера
+    &__hero-img{
+        object-fit: contain;
+        max-width: 100%;
+    }
+
+    &__right{
+        padding: 30px 0 44px 60px;
+    }
+
+    &__title{
+        font-size: 36px;
+        line-height: 1.33;
+        padding-bottom: .66em;
+    }
+
+    //т.к. на сайте уже задан important
+    //перебиваю его
+    &__p{
+        font-size: 15px !important;
+        line-height: 1.6em !important;
+    }
+}
+
+//отступ между ссылкой и кнопкой в block14__over
+.launch-alert1_link + .launch-alert2-potr{
+    margin-top: 32px;
+}
+
+//блок с иконками
+.block10{
+    padding: 100px 0 120px;
+}
+
+//блок с формой
+//убираю ненужные отсутпы
+.block-form-potrebitelyam .modal-up__content{
+    top: 0;
+    margin-top: 0;
+}
+
+//блок с формой убираю нг тематику
+.block-form-potrebitelyam-background{
+    background: #63666A;
+}
