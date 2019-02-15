@@ -88,6 +88,10 @@ input, button {
         padding-top: 0;
     }
 
+    &_no-pad-bot{
+        padding-bottom: 0;
+    }
+
     &_brd-bot{
         border-bottom: 1px solid $color-secondary;
     }

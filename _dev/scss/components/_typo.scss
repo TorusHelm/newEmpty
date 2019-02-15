@@ -161,10 +161,15 @@
         font-weight: 700;
         letter-spacing: .2ex;
         line-height: 1.5;
-        //float: right;
 
-        @include respondTo(mobile){
-
+        //для bitrix
+        & input{
+            background: transparent;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: .2ex;
+            line-height: 1.5;
+            font-family: $ff-base;
         }
 
         &:after{

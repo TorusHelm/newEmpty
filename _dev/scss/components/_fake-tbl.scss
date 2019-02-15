@@ -47,6 +47,8 @@
         white-space: nowrap;
         flex: 0 0 17%;
         display: inline-block;
+        overflow: hidden;
+        text-overflow: ellipsis;
 
         @at-root .fake-tbl_two-col &{
             flex-basis: 39%;
