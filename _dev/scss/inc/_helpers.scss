@@ -1,11 +1,3 @@
-//.clearfix {
-//    &:after {
-//        display: block;
-//        clear: both;
-//        content: "";
-//    }
-//}
-
 //TODO: wtf, realy???
 .p{
     &-mw{
@@ -60,7 +52,7 @@
     white-space: nowrap;
 }
 
-//TODO: временное решение, надо быстро сделать
+//bg для попапа
 .bg-fixed{
     position: fixed;
     z-index: 1000;
@@ -74,4 +66,19 @@
 //fix header на сайте
 .top-background1 .page-line{
     box-sizing: content-box;
+}
+
+//т.к. breadcrumbs сделнаы не на flex-ах
+//приходиться придумывать костыль для стр. provider-order-list.html
+.col_right{
+    flex-grow: 0;
+    margin-left: auto;
+    display: inline-flex;
+
+    @include respondTo(mobile){
+        margin-left: 0;
+        order: -1;
+        flex-basis: 100%;
+        margin-bottom: 1rem;
+    }
 }

@@ -151,4 +151,30 @@
             background: $color-primary url('../img/ico-download.svg') no-repeat 50% 50% / 14px 18px;
         }
     }
+
+    &_out{
+        padding-right: 34px;
+        position: relative;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: .2ex;
+        line-height: 1.5;
+        //float: right;
+
+        @include respondTo(mobile){
+
+        }
+
+        &:after{
+            content: '';
+            position: absolute;
+            right: 0;
+            background: url('../img/ico-exit.svg') no-repeat 50% 50% / contain;
+            width: 18px;
+            height: 18px;
+            top: -2px;
+        }
+    }
 }

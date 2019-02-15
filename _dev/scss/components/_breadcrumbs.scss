@@ -1,4 +1,4 @@
-//TODO: надо бы переделать, не нравится что отсуп снизу
+//TODO: надо бы переделать, не нравится что отсуп снизу, почему не flex?!
 .breadcrumbs{
     margin-bottom: 17px;
     line-height: 12px;
@@ -37,6 +37,10 @@
             @include respondTo(mobile){
                 margin: 0 5px;
             }
+        }
+
+        &_right{
+            float: right;
         }
 
         &:last-of-type{

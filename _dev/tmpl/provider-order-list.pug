@@ -13,6 +13,16 @@ block content
     .c-container
       .row
         .col
+          ul.breadcrumbs
+            li.breadcrumbs__item
+              a.breadcrumbs__link(href='/') Главная
+            li.breadcrumbs__item
+              span Авторизация
+        .col.col_right
+          a.link.link_out(href="#") Выйти
+
+      .row.gap-t
+        .col
           h1.title Список заявок
 
           .filter.gap-t
