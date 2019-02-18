@@ -15,6 +15,14 @@
 //блок hero
 .block14{
 
+    @media screen and (max-width: 760px){
+        overflow: hidden;
+    }
+
+    @media screen and (max-width: 320px){
+        margin-left: -10px;
+    }
+
     //картинка для баннера
     &__hero-img{
         object-fit: contain;
@@ -73,6 +81,18 @@
             &:before{
                 right: 0;
             }
+        }
+    }
+
+    //картинка для англ. версии
+    & .block14__background{
+        width: 100%;
+        background-size: 85%;
+        background-position: -100% 50%;
+
+        @media screen and (max-width: 760px) {
+            background-size: cover;
+            background-position: 50% 50%;
         }
     }
 }
