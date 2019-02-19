@@ -1,0 +1,325 @@
+extends inc/base
+
+block title
+  title= 'Тест на готовность магазина к маркировке'
+  meta(name="description" content="Описание страницы")
+block style
+  link(rel='stylesheet', href='css/lk-provider.css')
+
+block content
+  include parts/header
+
+  section.section.section_m-pad.after-fixed-nav
+    .c-container
+      .row
+        .col
+          ul.breadcrumbs
+            li.breadcrumbs__item
+              a.breadcrumbs__link(href='/') Главная
+            li.breadcrumbs__item
+              a.breadcrumbs__link(href='/business/') Бизнесу
+            li.breadcrumbs__item
+              span тест на&nbsp;готовность магазина
+      .row
+        .col
+          h1.title Тест на&nbsp;готовность магазина к&nbsp;маркировке
+      .row
+        .col
+          .nav-tab.gap-t.js_outClick.js_tabsOption
+            .nav-tab__wrapper
+              .nav-tab__item.nav-tab__item_icon.active.js-tab(data-href="#step1")
+                span.nav-tab__count 1
+                | Маркировка табака<br> с 1 марта 2019 года
+              .nav-tab__item.nav-tab__item_icon.js-tab(data-href="#step2")
+                span.nav-tab__count 2
+                | Что нужно для продажи<br> по новым правилам
+              .nav-tab__item.nav-tab__item_icon.js-tab(data-href="#step3")
+                span.nav-tab__count 3
+                | Тест на&nbsp; готовность<br> магазина к&nbsp;маркировке
+
+  #step1.js-tab-content
+    section.section.section_gray.section_m-pad
+      .c-container
+        .row
+          .col-12.col-lg-6
+            video(poster='img/video-poster-test.png')
+              source(src='video/duel.mp4', type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"')
+          .col-12.col-lg-6
+            .c-block
+              h2.content-title С&nbsp;1&nbsp;марта 2019 года вводятся новые правила оборота сигарет.
+              p.c-block__txt Они распространятся на&nbsp;всех участников рынка&nbsp;&mdash; производителей, импортеров, оптовую и&nbsp;розничную торговлю.
+              button.btn.btn_primary.btn_reset-sm.js-tab(data-href="#step4") Пройти тест <span class="d-none d-sm-block">на&nbsp;готовность магазина к&nbsp;маркировке</span>
+
+    section.section
+      .c-container
+        h2.content-title Этапы запуска маркировки табака
+        .row
+          .col-md-4
+            figure.iconbox
+              .iconbox__img.iconbox__img_mh
+                img(src="img/img-registration.png")
+              figcapture.iconbox__body
+                h3.iconbox__title 1 марта 2019 года
+                p.iconbox__txt.iconbox__txt_bold Обязательная регистрация производителей и&nbsp;торговых точек в&nbsp;Национальной системе цифровой маркировки Честный ЗНАК.
+
+          .col-md-4
+            figure.iconbox
+              .iconbox__img.iconbox__img_mh
+                img(src="img/img-stop-product.png")
+              figcapture.iconbox__body
+                h3.iconbox__title 1  июля 2019 года
+                p.iconbox__txt.iconbox__txt_bold.mb-2 Прекращение выпуска немаркеруемой продукции
+                p.iconbox__txt.mb-2 При продаже сигарет на&nbsp;кассе нужно просканировать DataMatrix код с&nbsp;каждой пачки или блока. При продаже товара касса должна передать в&nbsp;ОФД информацию о&nbsp;том, что в&nbsp;чеке содержится маркируемая продукция.
+                p.iconbox__txt Поставка маркированных сигарет дистрибьютору, напрямую от&nbsp;производителя, будет сопровождаться электронными универсальными передаточными документами (УПД) с&nbsp;указанием кодов продукции при помощи систем электронного документооборота.
+
+          .col-md-4
+            figure.iconbox.iconbox_last
+              .iconbox__img.iconbox__img_mh
+                img(src="img/img-stop-sale.png")
+              figcapture.iconbox__body
+                h3.iconbox__title 1  июля 2020 года
+                p.iconbox__txt.iconbox__txt_bold.mb-2 Прекращение оборота немаркеруемой продукции
+                p.iconbox__txt Поставка маркированных сигарет в&nbsp;розничную точку и&nbsp;субдистрибьютору будет сопровождаться электронными универсальными передаточными документами (УПД) с&nbsp;указанием кодов продукции при помощи систем электронного документооборота.
+        
+        .row
+          .col-12
+            
+            .business-line Продавать немаркированные пачки сигарет в&nbsp;рознице можно до&nbsp;1&nbsp;июля 2020&nbsp;года.
+
+    section.section
+      .c-container
+        h2.content-title.content-title_no-mrg Что нужно знать о&nbsp;маркировке?
+
+        .row.flex-column-reverse.flex-lg-row
+
+          .col-lg-6
+              figure.iconbox.iconbox_horizontal
+                img.iconbox__img(src="img/img-cash-box.svg" alt="")
+                figcapture.iconbox__body
+                  p.iconbox__txt Согласно закону &#8470;&nbsp;54-ФЗ для торговли подакцизными товарами необходимо использовать онлайн-кассу с&nbsp;возможностью расшифровки номенклатуры
+              figure.iconbox.iconbox_horizontal
+                img.iconbox__img(src="img/img-scanner.svg" alt="")
+                figcapture.iconbox__body
+                  p.iconbox__txt Если вы&nbsp;используете систему ЕГАИС, то&nbsp;ваш сканер штрих-кода подойдет для работы с&nbsp;маркировкой
+              figure.iconbox.iconbox_horizontal
+                img.iconbox__img(src="img/img-program.svg" alt="")
+                figcapture.iconbox__body
+                  p.iconbox__txt ПО&nbsp;кассовой техники должно формировать и&nbsp;отправлять в&nbsp;ОФД электронный кассовый чек с&nbsp;указанием кода маркировки товара
+              figure.iconbox.iconbox_horizontal
+                img.iconbox__img(src="img/img-check.svg" alt="")
+                figcapture.iconbox__body
+                  p.iconbox__txt ОФД передает электронный кассовый чек с&nbsp;указанием кода маркировки товара в&nbsp;систему Честный ЗНАК
+              figure.iconbox.iconbox_horizontal
+                img.iconbox__img(src="img/img-egais.svg" alt="")
+                figcapture.iconbox__body
+                  p.iconbox__txt Если вы&nbsp;используете систему ЕГАИС, то&nbsp;ваш сканер штрих-кода подойдет для работы с&nbsp;маркировкой
+
+          .col-lg-5.offset-lg-1.align-self-lg-end.align-self-center
+            img(src="img/img-provider-new-rule.png" alt="")
+      
+
+    section.section.section_gray
+      .c-container
+        h3.content-title.content-title_mid Перечень товаров, подлежащих обязательной маркировке в&nbsp;2019 году<br>
+          | (Постановление Правительства РФ &#8470;&nbsp;792-р):
+        .row
+          .col
+            ul.list.list_def.square
+              li В&nbsp;марте 2019&nbsp;г. будет промаркирован табак
+              li В&nbsp;июле 2019&nbsp;г. начинается обязательная маркировка обуви
+              li В&nbsp;декабре 2019&nbsp;г. будут промаркированы духи и&nbsp;туалетная вода, большинство товаров легкой промышленности, фотоаппараты и&nbsp;шины
+
+  #step2.js-tab-content.d-none
+    section.section.py-0
+      .c-container
+        .row
+          .col-lg-10.bg-gray-clip.prr-0
+
+            .iconbox__top-line До&nbsp;1&nbsp;июля 2019 года
+          
+            .d-flex.flex-wrap.justify-content-lg-between.justify-content-start.px-3.px-lg-0
+
+              .col-sm-6.col-md-4.col-lg-2
+                .iconbox.iconbox_step
+                  span.iconbox__step 1
+                  .iconbox__img
+                    img(src="img/ico-reg-site.svg" alt="")
+                  .iconbox__body
+                    p.iconbox__txt Зарегистрироваться на&nbsp;сайте
+                    a.iconbox__link(href="https://xn--80ajghhoc2aj1c8b.xn--p1ai/") ЧестныйЗНАК.рф
+              .col-sm-6.col-md-4.col-lg-2
+                .iconbox.iconbox_step
+                  span.iconbox__step 2
+                  .iconbox__img
+                    img(src="img/ico-enter-profile.svg" alt="")
+                  .iconbox__body
+                    p.iconbox__txt Заполнить данные в&nbsp;личном кабинете
+                    p.iconbox__notes Необходима электронная подпись
+              .col-sm-6.col-md-4.col-lg-2
+                .iconbox.iconbox_step
+                  span.iconbox__step 3
+                  .iconbox__img
+                    img(src="img/ico-upgrade-cashbox.svg" alt="")
+                  .iconbox__body
+                    p.iconbox__txt Обновить прошивку онлайн-кассы
+              .col-sm-6.col-md-4.col-lg-2
+                .iconbox.iconbox_step
+                  span.iconbox__step 4
+                  .iconbox__img
+                    img(src="img/ico-upgrade-system.svg" alt="")
+                  .iconbox__body
+                    p.iconbox__txt Обновить систему товарного учёта
+              .col-sm-6.col-md-4.col-lg-2
+                .iconbox.iconbox_step
+                  span.iconbox__step 5
+                  .iconbox__img
+                    img(src="img/ico-connect-scanner.svg" alt="")
+                  .iconbox__body
+                    p.iconbox__txt Подключить 2D&nbsp;сканер штрихкода, если ранее не&nbsp;использовался
+
+          .col-lg-2.bg-gray-clip.pll-0
+
+            .iconbox__top-line До&nbsp;1&nbsp;июля 2020 года
+
+            .col-sm-6.col-md-4.col-lg-12.pll-40
+              .iconbox.iconbox_step.iconbox_last
+                span.iconbox__step 6
+                .iconbox__img
+                  img(src="img/ico-settings-system.svg" alt="")
+                .iconbox__body
+                  p.iconbox__txt Настроить систему электронного документооборота, если ранее не&nbsp;использовалась
+        .row
+          .col
+            .d-flex.justify-content-start.mt-40
+              button.btn.btn_primary.btn_reset-sm.js-tab(data-href="#step3") Пройти тест <span class="d-none d-sm-block">на&nbsp;готовность магазина к&nbsp;маркировке</span>
+
+    section.section
+      .c-container
+        .row
+          .col-md-9
+            h3.content-title.content-title_mid Инструкция по&nbsp;обновлению онлайн-касс и&nbsp;программного обеспечения, а&nbsp;также подключения ЭДО вы&nbsp;можете получить у&nbsp;производителей соответствующих решений.
+        .partner-block
+          h4.partner-block__title Поставщики кассовых решений
+          .partner-block__row
+            img.partner-block__item(src="img/p-1.png" alt="")
+            img.partner-block__item(src="img/p-2.png" alt="")
+            img.partner-block__item(src="img/p-3.png" alt="")
+            img.partner-block__item(src="img/p-4.png" alt="")
+            img.partner-block__item(src="img/p-5.png" alt="")
+            img.partner-block__item(src="img/p-6.png" alt="")
+            img.partner-block__item(src="img/p-7.png" alt="")
+        .partner-block
+          h4.partner-block__title Операторы фискальных данных (ОФД)
+          .partner-block__row
+            img.partner-block__item(src="img/p-8.png" alt="")
+            img.partner-block__item(src="img/p-9.png" alt="")
+            img.partner-block__item(src="img/p-10.png" alt="")
+            img.partner-block__item(src="img/p-11.png" alt="")
+            img.partner-block__item(src="img/p-12.png" alt="")
+        .partner-block
+          h4.partner-block__title Разработчики учетных решений
+          .partner-block__row
+            img.partner-block__item(src="img/p-13.png" alt="")
+            img.partner-block__item(src="img/p-14.png" alt="")
+            img.partner-block__item(src="img/p-15.png" alt="")
+            img.partner-block__item(src="img/p-16.png" alt="")
+            img.partner-block__item(src="img/p-17.png" alt="")
+        .partner-block
+          h4.partner-block__title Операторы фискальных данных (ОФД)
+          .partner-block__row
+            img.partner-block__item(src="img/p-9.png" alt="")
+            img.partner-block__item(src="img/p-12.png" alt="")
+            img.partner-block__item(src="img/p-18.png" alt="")
+            img.partner-block__item(src="img/p-19.png" alt="")
+            img.partner-block__item(src="img/p-14.png" alt="")
+
+  #step3.js-tab-content.d-none
+    form.form
+      section.section.section_no-pad-top.section_brd-bot
+        .c-container
+          h2.content-title Тест на&nbsp;готовность магазина к&nbsp;маркировке
+          .row
+            .col-12.col-lg-8
+              fieldset.form__wrap
+                h3.form__title Укажите ваши контактные данные:
+                .form__row
+                  input.inp(placeholder="ФИО" type="text")
+                .form__row.form__row_reset-mbl
+                  .form__col.form__col_half
+                    input.inp(placeholder="Компания" type="text")
+                  .form__col.form__col_half
+                    input.inp(placeholder="Город" type="text")
+                .form__row.form__row_reset-mbl
+                  .form__col.form__col_half
+                    input.inp(placeholder="Контактный телефон" type="tel")
+                  .form__col.form__col_half
+                    input.inp(placeholder="Адрес эл. почты" type="email")
+      section.section.section_m-pad.section_brd-bot
+        .c-container
+          .row
+            .col-12.col-lg-8
+              h3.form__title Вы используете онлайн-кассу?
+              .form__row
+                .form__col.form__col_sm
+                  input.radio(type="radio" value="yes" name="cachbox" id="cashbox-yes" checked)
+                  label.lbl(for="cashbox-yes") Да
+                .form__col.form__col_sm
+                  input.radio(type="radio" name="cachbox" id="cashbox-no" value="no")
+                  label.lbl(for="cashbox-no") Нет
+              .row.form__row.form__row_reset-mbl
+                .form__col.col-md-6
+                  select.js-select
+                    option(value="0" disabled selected).select-lbl Укажите производителя
+                    option(value="1") Пункт 1
+                    option(value="2") Пункт 2
+                    option(value="3") Пункт 3
+      section.section.section_m-pad.section_brd-bot
+        .c-container
+          .row
+            .col-12.col-lg-8
+              h3.form__title Вы используете 2D-сканер?
+              .form__row
+                .form__col.form__col_sm
+                  input.radio(type="radio" name="scanner" id="scanner-yes" value="yes" checked)
+                  label.lbl(for="scanner-yes") Да
+                .form__col.form__col_sm
+                  input.radio(type="radio" name="scanner" id="scanner-no" value="no")
+                  label.lbl(for="scanner-no") Нет
+      section.section.section_m-pad.section_brd-bot
+        .c-container
+          .row
+            .col-12.col-lg-8
+              h3.form__title У&nbsp;вас есть кассовая программа?
+              .form__row
+                .form__col.form__col_sm
+                  input.radio(type="radio" name="program" id="program-yes" value="yes")
+                  label.lbl(for="program-yes") Да
+                .form__col.form__col_sm
+                  input.radio(type="radio" name="program" id="program-no" value="no" checked)
+                  label.lbl(for="program-no") Нет
+              .form__row
+                input.checkbox(type="checkbox" name="program" id="program" checked)
+                label.lbl(for="program") Нужна кассовая программа
+      section.section.section_m-pad.section_brd-bot
+        .c-container
+          .row
+            .col-12.col-lg-8
+              h3.form__title Вам нужна помощь IT-специалиста для подключения магазина к&nbsp;системе маркировки?
+              .form__row
+                .form__col.form__col_sm
+                  input.radio(type="radio" name="specialist" id="specialist-yes" value="yes")
+                  label.lbl(for="specialist-yes") Да
+                .form__col.form__col_sm
+                  input.radio(type="radio" name="specialist" id="specialist-no" value="no" checked)
+                  label.lbl(for="specialist-no") Нет
+              .form__row
+                input.checkbox(type="checkbox" name="agree" id="agree" checked)
+                label.lbl(for="agree") Вы&nbsp;принимаете соглашение о&nbsp;передачи данных 3-им лицам?
+              .form__row.form__row_last
+                button.btn.btn_primary(type="submit") Отправить
+
+  include inc/footer
+
+block script
+  script(src="js/selectric.min.js")
+  script(src="js/lk-provider.js")

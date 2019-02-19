@@ -82,3 +82,48 @@
         margin-bottom: 1rem;
     }
 }
+
+.bg-gray-clip{
+    background-color: $color-secondary;
+    background-clip: content-box;
+}
+
+.padding-right{
+    padding-right: 2px !important;
+
+    @include respondTo(tablet){
+        
+    }
+}
+
+.mt-40{
+    margin-top: 40px;
+}
+
+.pll-0{
+    padding-left: 0;
+
+    @include respondTo(tablet){
+        padding-right: 0;
+        width: calc(100% + 20px);
+        margin: 0 -10px;
+    }
+}
+
+.prr-0{
+    padding-right: 2px;
+
+    @include respondTo(tablet){
+        padding-left: 0;
+        padding-right: 0;
+        width: calc(100% + 20px);
+        margin: 0 -10px;
+    }
+}
+
+.pll-40{
+
+    @include respondTo(tablet){
+        padding-left: 40px;
+    }
+}

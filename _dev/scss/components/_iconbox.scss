@@ -27,12 +27,20 @@
     }
 
     &__txt{
-        font-size: 14px;
+        font-size: 16px;
         font-weight: 400;
+
+        &_bold{
+            font-weight: 700;
+        }
     }
 
     &__img{
         flex-shrink: 0;
+
+        &_mh{
+            min-height: 160px;
+        }
     }
 
     &__step{
@@ -93,7 +101,7 @@
     &_horizontal{
         flex-direction: row;
         align-items: flex-start;
-        margin-top: 40px;
+        margin-top: 24px;
 
         @include respondTo(tablet){
             margin: 20px 0 0;
@@ -127,19 +135,19 @@
             height: 100px;
             position: relative;
 
-            &:after{
-                content: '';
-                position: absolute;
-                width: 87px;
-                height: 8px;
-                background: url('../img/arrow-next-step_bg.svg')repeat-x;
-                top: calc(50% - 4px);
-                left: calc(100% + 14px);
+            // &:after{
+            //     content: '';
+            //     position: absolute;
+            //     width: 87px;
+            //     height: 8px;
+            //     background: url('../img/arrow-next-step_bg.svg')repeat-x;
+            //     top: calc(50% - 4px);
+            //     left: calc(100% + 14px);
 
-                @include respondTo(desktop){
-                    display: none;
-                }
-            }
+            //     @include respondTo(desktop){
+            //         display: none;
+            //     }
+            // }
         }
 
         & .iconbox__body{
@@ -184,5 +192,17 @@
                 max-width: 100%;
             }
         }
+    }
+
+    &__top-line{
+        width: 100%;
+        background-color: $color-dark;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 700;
+        color: $color-primary;
+        padding-top: 13px;
+        padding-bottom: 12px;
+        margin-bottom: 40px;
     }
 }

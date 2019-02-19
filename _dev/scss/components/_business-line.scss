@@ -1,0 +1,18 @@
+.business-line{
+    text-align: center;
+    background-color: $bg-primary;
+    font-size: 24px;
+    padding-top: 15px;
+    padding-bottom: 14px;
+    position: relative;
+    bottom: -64px;
+
+    @include respondTo(tablet){
+        bottom: -40px;
+    }
+
+    @include respondTo(mobile){
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
