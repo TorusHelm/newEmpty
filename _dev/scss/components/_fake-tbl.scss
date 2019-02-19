@@ -92,7 +92,11 @@
         }
 
         &_date{
-            flex: 0 0 12%;
+            flex: 0 0 165px;
+
+            @include respondTo(desktop){
+                flex: 0 0 150px
+            }
         }
 
         &_link{
