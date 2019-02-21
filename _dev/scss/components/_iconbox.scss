@@ -13,6 +13,16 @@
         }
     }
 
+    &_second{
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+
+        @include respondTo(mobile){
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+    }
+
     &__body{
         text-align: center;
         color: $color-txt;
@@ -20,6 +30,34 @@
         padding-top: 1em;
         font-size: 20px;
         max-width: 100%;//fuck IE
+
+        &_second{
+            padding-left: 56px;
+            flex: 0 0 66%;
+            max-width: 100%;
+            text-align: left;
+            position: relative;
+
+            @include respondTo(mobile){
+                flex: none;
+                width: 100%;
+                padding-left: 0;
+            }
+
+            &::before{
+                content: '';
+                position: absolute;
+                background-image: url(../img/icon-box.svg);
+                width: 32px;
+                height: 32px;
+                left: 0;
+                top: 1em;
+
+                @include respondTo(mobile){
+                    display: none;
+                }
+            }
+        }
     }
 
     &__title{
@@ -33,6 +71,21 @@
         &_bold{
             font-weight: 700;
         }
+
+        &_bull{
+            position: relative;
+            padding-left: 32px;
+
+            &::before{
+                content: '';
+                position: absolute;
+                width: 16px;
+                height: 16px;
+                background-color: $color-primary;
+                left: 0;
+                top: 2px;
+            }
+        }
     }
 
     &__img{
@@ -40,6 +93,16 @@
 
         &_mh{
             min-height: 160px;
+        }
+
+        &_second{
+            min-width: 180px;
+            text-align: center;
+            margin-left: 90px;
+
+            @include respondTo(mobile){
+                margin-left: 0;
+            }
         }
     }
 
