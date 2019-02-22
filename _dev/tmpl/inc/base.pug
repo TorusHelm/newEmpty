@@ -4,14 +4,23 @@ html
 
         block title
             title= 'Заголовок страницы'
-            meta(name="description" content="Описание страницы")
+            meta( name="description" content="Описание страницы" )
+
         include head
+        
         block style
-            link(rel='stylesheet', href='css/all.css')
+            link( rel='stylesheet', href='css/all.css' )
 
     body
+    
         .page-wrap
+
+            include ../common/mixin-svg-use
+            .svg-lib
+                include ../common/svg-lib
+            
             block content
 
-        script(src="js/jquery-3.3.1.min.js")
-        block script
+        //- scripts
+
+        script( scr="js/main.js" )

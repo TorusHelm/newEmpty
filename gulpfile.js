@@ -7,7 +7,6 @@ const gulp = require('gulp'),
       babel = require('gulp-babel'),
       sass = require('gulp-sass'),
       csso = require('gulp-csso'),
-      imagemin = require('gulp-imagemin'),
       newer = require('gulp-newer'),
       size = require('gulp-size'),
       sourcemaps = require('gulp-sourcemaps'),
@@ -20,21 +19,24 @@ const path = {
     img: 'public/img/',
     js: 'public/js/',
     base: '',
-    html: 'public/'
+    html: 'public/',
+    fonts: 'public/fonts/'
   },
   src: {
     style: '_dev/scss/*.scss',
     scss: '_dev/scss/',
-    img: '_dev/img/*.*',
+    img: '_dev/img/**/*',
     js: '_dev/js/*.js',
-    pug: '_dev/tmpl/*.pug'
+    pug: '_dev/tmpl/*.pug',
+    fonts: '_dev/fonts/'
   },
   watch: {
     style: '_dev/scss/**/*.scss',
-    img: '_dev/img/*.*',
+    img: '_dev/img/**/*',
     js: '_dev/js/**/*.js',
     html: '_dev/*.html',
-    pug: '_dev/tmpl/**/*.pug'
+    pug: '_dev/tmpl/**/*.pug',
+    fonts: '_dev/fonts/'
   },
   clean: 'public/'
 };
@@ -76,20 +78,6 @@ function images() {
   return gulp
     .src(path.src.img)
     .pipe(newer(path.build.img))
-    .pipe(imagemin([
-        imagemin.gifsicle({interlaced: true}),
-        imagemin.jpegtran({progressive: true}),
-        imagemin.optipng({optimizationLevel: 5}),
-        imagemin.svgo({
-          plugins: [
-            {
-              removeViewBox: false,
-              collapseGroups: true
-            }
-          ]
-        })
-      ]
-    ))
     .on('error', console.log)
     .pipe(gulp.dest(path.build.img));
 }
@@ -131,8 +119,16 @@ function html() {
     .pipe(gulp.dest(path.build.html));
 }
 
+function fonts() {
+  return gulp
+    .src(path.src.fonts)
+    .on('error', console.log)
+    .pipe(gulp.dest(path.build.fonts));
+}
+
 function watchFiles(){
   gulp.watch([path.watch.img], images);
+  gulp.watch([path.watch.fonts], fonts);
   gulp.watch([path.watch.style], styles);
   gulp.watch([path.watch.js], js);
   gulp.watch([path.watch.pug], gulp.series(html, browserSyncReload));
@@ -144,8 +140,9 @@ gulp.task("css", styles);
 gulp.task("js", js);
 gulp.task("html", html);
 gulp.task("releaseJS", releaseJS);
+gulp.task("fonts", fonts);
 
-gulp.task('build', gulp.parallel(styles, images, js, html));
+gulp.task('build', gulp.parallel(styles, images, js, html, fonts));
 
 // watch
-gulp.task("watch", gulp.parallel(watchFiles, browserSync));
+gulp.task("default", gulp.parallel(watchFiles, browserSync));

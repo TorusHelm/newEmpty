@@ -1,52 +1,16 @@
 @import "assets/media-mixin";
 
 //vendors
-@import "vendors/bootstrap/bootstrap-grid";
 
 //include default
+
 @import "inc/var";
-@import "inc/plh";
 @import "inc/layout";
-@import "inc/containers";
-@import "inc/ui";
+@import "inc/reset";
 
 //components
-@import "components/typo";
-@import "components/breadcrumbs";
-@import "components/tabs";
-@import "components/list";
-@import "components/btn";
-@import "components/form";
-@import "components/paragraph";
-@import "components/blocks";
-@import "components/iconbox";
-@import "components/partner-block";
-@import "components/lk-auth";
-@import "components/filter";
-@import "components/fake-tbl";
-@import "components/popup";
-@import "components/business-line";
 
 //assets
-@import "assets/selectric";
-
-//@import "components/button";
-//@import "components/alert";
-//@import "components/icobar";
-//@import "components/multiside";
-//@import "components/subtitle";
-//@import "components/header";
-//@import "components/footer";
-//@import "components/card";
-//@import "components/leader";
-//@import "components/paginator";
-//@import "components/logo";
-//@import "components/menu";
-//@import "components/search";
-//@import "components/socials";
-//@import "components/sorting";
-//@import "components/hash";
-//@import "components/vebinar";
 
 //helpers
 @import "inc/helpers";
